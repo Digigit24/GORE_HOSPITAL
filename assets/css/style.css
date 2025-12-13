@@ -1,4 +1,4 @@
-/*=================Scss Indexing=============
+﻿/*=================Scss Indexing=============
 1.variables
 2.typography
 3.spacing
@@ -15028,7 +15028,7 @@ header.header-one.style-two.header--sticky {
 }
 
 #anywhere-home {
-    cursor: url(../images/banner/shape/close.png), auto;
+    cursor: url(../close.png), auto;
     background: #0e1013;
     position: fixed;
     width: 100%;
@@ -15532,7 +15532,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 
 .banner-area-one {
-    background-image: url(../images/banner/01.webp);
+    background-image: url(../01_banner.webp);
     position: relative;
     height: 798px;
     display: flex;

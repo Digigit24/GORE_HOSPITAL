@@ -1,4 +1,4 @@
-
+﻿
 const footerHTML = `
   <div class="rts-footer-area footer-bg pt--105 pt_sm--50">
     <div class="container">
@@ -7,7 +7,7 @@ const footerHTML = `
           <div class="footer-wrapper-style-between">
             <div class="single-wized">
               <a href="#" class="logo">
-                <img id="footerlogo" width="200" style="border-radius: 20px" src="/assets/images/logo/logo.jpeg"
+                <img id="footerlogo" width="200" style="border-radius: 20px" src="/assets/logo.jpeg"
                   alt="logo" class="logo">
               </a>
               <h6 class="title">Contact</h6>
@@ -57,8 +57,8 @@ const footerHTML = `
             <div class="single-wized">
               <h6 class="title">Working Time</h6>
               <div class="body">
-                <p class="location">OPD (Mon – Sat): 9:00 AM – 9:00 PM</p>
-                <p class="location">Sunday: 10:00 AM – 2:00 PM</p>
+                <p class="location">OPD (Mon “ Sat): 9:00 AM “ 9:00 PM</p>
+                <p class="location">Sunday: 10:00 AM “ 2:00 PM</p>
                 <p class="location">Emergency: 24x7</p>
                 <a href="tel:+919689528414">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -81,7 +81,7 @@ const footerHTML = `
         <div class="col-lg-12">
           <div class="col-lg-12">
             <div class="copyright-area-inner">
-              <p>© 2025 Gore Multispeciality Hospital, Ravet (PCMC). All Rights Reserved.</p>
+              <p>© 2025 Gore Multispeciality Hospital, Ravet PCMC. All Rights Reserved.</p>
               <p>
                 <a href="/privacy-policy.html"
                   style="color: inherit; opacity: 0.7; font-size: 14px; margin-right: 10px;">Privacy Policy</a> |
@@ -96,8 +96,8 @@ const footerHTML = `
 `;
 
 document.addEventListener('DOMContentLoaded', function () {
-    const footerPlaceholder = document.getElementById('footer-placeholder');
-    if (footerPlaceholder) {
-        footerPlaceholder.innerHTML = footerHTML;
-    }
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+  if (footerPlaceholder) {
+    footerPlaceholder.innerHTML = footerHTML;
+  }
 });
