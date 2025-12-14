@@ -8953,7 +8953,7 @@ a:focus,
 a:active {
     text-decoration: none;
     outline: none;
-    color: #fff;
+    /* color: #fff; */
 }
 
 a:focus {
