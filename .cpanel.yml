@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/divineblisspuna/public_html/gorehospital.com
+    - /bin/cp -R * $DEPLOYPATH
