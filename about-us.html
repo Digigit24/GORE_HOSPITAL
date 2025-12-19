@@ -1,0 +1,1582 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logo.jpeg">
+  <title>About Us | Gore Multispeciality Hospital, Ravet (PCMC)</title>
+  <meta name="description"
+    content="Learn about Gore Multispeciality Hospital in Ravet, Pimpri Chinchwad. Our mission, vision, team, values, and patient-first approach with 24x7emergency care.">
+
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gorehospital.com/">
+  <meta property="og:title" content="About Us | Gore Multispeciality Hospital, Ravet (PCMC)">
+  <meta property="og:description"
+    content="Learn about Gore Multispeciality Hospital in Ravet, Pimpri Chinchwad. Our mission, vision, team, values, and patient-first approach with 24x7emergency care.">
+  <meta property="og:image"
+    content="https://gorehospital.com/images/about-gore-multispeciality-hospital-ravet-pimpri-chinchwad-pune.png">
+
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:url" content="https://gorehospital.com/">
+  <meta name="twitter:title" content="About Us | Gore Multispeciality Hospital, Ravet (PCMC)">
+  <meta name="twitter:description"
+    content="Learn about Gore Multispeciality Hospital in Ravet, Pimpri Chinchwad. Our mission, vision, team, values, and patient-first approach with 24x7emergency care.">
+  <meta name="twitter:image"
+    content="https://gorehospital.com/images/about-gore-multispeciality-hospital-ravet-pimpri-chinchwad-pune.png">
+
+  <meta name="google-site-verification" content="dLZg1y3EKmULqa1WODeAoMWPpKHYPyCSZ_bHDZ_-xEI" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://gorehospital.com/about-us.html">
+
+  <!-- Project styles (same palette) -->
+  <link rel="stylesheet" href="assets/css/plugins/plugins.css">
+  <link rel="stylesheet" href="assets/css/plugins/magnifying-popup.css">
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Greyscale/disabled helper for non-ready pages -->
+  <style>
+    .is-disabled,
+    .is-disabled * {
+      filter: grayscale(100%) opacity(0.55);
+      pointer-events: none;
+      cursor: not-allowed !important;
+      text-decoration: none !important;
+    }
+
+    /* Doctor Card Gradient Styles */
+    /* Doctor Card Styles from our-doctors.html */
+    :root {
+      --text: #1f1f25;
+      --muted: #5b5b63;
+      --card-bg: #ffffff;
+      --card-bd: rgba(0, 0, 0, 0.06);
+      --soft: 0 6px 24px rgba(0, 0, 0, 0.06);
+      --soft-2: 0 12px 32px rgba(0, 0, 0, 0.07);
+      --silver-gradient: linear-gradient(135deg,
+          #f8f9fa 0%,
+          #e9ecef 50%,
+          #dee2e6 100%);
+    }
+
+    /* ---------- Doctors grid ---------- */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin: 40px 0 80px;
+    }
+
+    .doc-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      /* Soft, premium shadow */
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      height: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.02);
+    }
+
+    .doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .doc-photo {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      /* Square - Professional & Consistent */
+      background: #f8f9fa;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .doc-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .doc-card:hover .doc-photo img {
+      transform: scale(1.08);
+      /* Subtle zoom */
+    }
+
+    /* Details Section */
+    .doc-body {
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center align for premium feel */
+      text-align: center;
+      gap: 6px;
+      flex-grow: 1;
+      background: #fff;
+      z-index: 5;
+      position: relative;
+    }
+
+    .doc-name {
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 1.3;
+      margin: 0;
+      color: #1a202c;
+      letter-spacing: -0.3px;
+    }
+
+    .doc-spec {
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #007bff;
+      /* Medical Blue accent */
+      margin-top: 2px;
+    }
+
+    .doc-qual {
+      font-size: 14px;
+      color: #718096;
+      margin: 0;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    /* ---------- Empty State (Creative & Professional) ---------- */
+    .doc-card.no-image .doc-photo {
+      background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    }
+
+    .doc-card.no-image .doc-photo img {
+      position: static;
+      width: 80px;
+      height: 80px;
+      opacity: 0.4;
+      object-fit: contain;
+      filter: grayscale(100%);
+      animation: pulse-logo 3s infinite ease-in-out;
+      display: block !important;
+    }
+
+    @keyframes pulse-logo {
+      0% {
+        opacity: 0.3;
+        transform: scale(0.95);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+      }
+
+      100% {
+        opacity: 0.3;
+        transform: scale(0.95);
+      }
+    }
+
+    .doc-card.no-image .doc-photo img {
+      /* This rule was in our-doctors.html but the img is displayed block above... 
+           Ah, there was a rule to display none, but then override. 
+           In our-doctors.html: 
+           .doc-card.no-image .doc-photo img { ... display: block !important; } 
+           then later
+           .doc-card.no-image .doc-photo img { display: none !important; }
+           Wait, there is a conflict in the source file I read?
+           Lines 206-219 set styles.
+           Lines 238-240 set display: none !important.
+           Let's look at Step 8 output lines 238-240.
+           238:     .doc-card.no-image .doc-photo img {
+           239:       display: none !important;
+           240:     }
+           This seems effectively to HIDE the image?
+           But line 218 said `display: block !important;`.
+           The later one wins. So images are HIDDEN in no-image cards?
+           Then what shows?
+           Line 243: .scan-line.
+           Line 259: .doc-card.no-image .doc-body { ... min-height: 110px; }
+           
+           Wait, if I hide the image, the `doc-photo` div is just a gradient?
+           Let's stick to what `our-doctors.html` has, assuming it works there.
+           I will copy the *entire* CSS block including the contradictory parts, as that's "layout consistant".
+        */
+      display: none !important;
+    }
+
+    /* The Scanner Bar Animation */
+    .scan-line {
+      position: absolute;
+      top: -10%;
+      left: 0;
+      width: 100%;
+      height: 15%;
+      background: linear-gradient(180deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.9) 50%,
+          transparent 100%);
+      filter: blur(4px);
+      opacity: 0.7;
+      z-index: 2;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .doc-card.no-image .doc-body {
+      background: #ffffff;
+      justify-content: flex-start;
+      height: auto;
+      min-height: 110px;
+    }
+
+    .social-icon {
+      color: white;
+      /* White color for the icons */
+      font-size: 15px;
+      /* Icon size */
+      text-decoration: none;
+      /* Remove underline */
+      margin-left: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #fefefe;
+      /* Change color on hover */
+      transform: scale(1.2);
+      /* Slightly increase the size of the icon */
+    }
+
+    /* Pulse Animation Keyframes */
+    @keyframes visionPulse {
+      0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0 rgba(24, 158, 203, 0));
+      }
+
+      50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px rgba(24, 158, 203, 0.4));
+      }
+
+      100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0 rgba(24, 158, 203, 0));
+      }
+    }
+
+    @keyframes glowExpand {
+      0% {
+        width: 120px;
+        height: 120px;
+        opacity: 0.6;
+      }
+
+      100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+      }
+    }
+
+    /* Applying Animation */
+    .vision-pulse-anim {
+      animation: visionPulse 3s infinite ease-in-out !important;
+    }
+
+    .glow-effect {
+      animation: glowExpand 2.5s infinite linear !important;
+    }
+
+    /* Mobile Specific Adjustments */
+    @media (max-width: 991px) {
+      .container-about-new .row {
+        flex-direction: column-reverse !important;
+        /* Visual on top, or remove -reverse to have Text on top */
+      }
+
+      .vision-visual-right {
+        margin-bottom: 40px !important;
+        margin-top: 0 !important;
+        padding-left: 0 !important;
+      }
+
+      .col-lg-6 {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+      }
+
+      .title {
+        font-size: 32px !important;
+      }
+    }
+
+    /* Base Card Styles */
+    .mission-gsap-card {
+      background: #ffffff !important;
+      border-radius: 20px !important;
+      padding: 30px !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+      border: 1px solid rgba(0, 0, 0, 0.03) !important;
+      /* Flex layout for Icon + Text alignment */
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-start !important;
+      gap: 20px !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+      z-index: 1;
+      /* Default z-index */
+    }
+
+    /* Card Icon Styling */
+    .mission-gsap-card .card-icon {
+      min-width: 60px !important;
+      width: 60px !important;
+      height: 60px !important;
+      border-radius: 50% !important;
+      background: #f4f9fd !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 24px !important;
+      color: #189ecb !important;
+    }
+
+    /* Card Text Styling */
+    .mission-gsap-card .card-title {
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      margin-bottom: 8px !important;
+      color: #1F1F25 !important;
+    }
+
+    .mission-gsap-card .card-text {
+      font-size: 15px !important;
+      line-height: 1.6 !important;
+      color: #666 !important;
+      margin: 0 !important;
+    }
+
+    /* Mobile Specific Adjustments */
+    @media (max-width: 991px) {
+      .mission-left-content {
+        text-align: center !important;
+      }
+
+      .mission-left-content .icon-mission {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .mission-gsap-card {
+        flex-direction: column !important;
+        /* Stack icon on top of text for mobile */
+        padding: 25px !important;
+      }
+    }
+
+    .mission {
+      width: 100%;
+    }
+
+    .icon-mission {
+      padding-left: 60rem;
+      padding-top: 10rem;
+    }
+
+    .information h2 {
+      font-size: 5rem;
+      text-align: center;
+    }
+
+    .disc-mission {
+      text-align: center;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 10%;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 40px 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      /* Slightly scale up the card */
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      /* Add a stronger shadow */
+    }
+
+    .mission-card {
+      align-items: flex-start;
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 22px;
+      background: #e8f3ff;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card-text {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+        /* Stacks cards vertically on smaller screens */
+      }
+
+      .card {
+        margin-bottom: 20px;
+        /* Adds space between stacked cards */
+      }
+    }
+
+    .about-image-icon {
+      height: 20vh;
+      width: 15vw;
+    }
+
+    .container-about {
+      display: flex;
+      align-items: center;
+      /* Vertically aligns the divs in the center */
+      justify-content: flex-start;
+      /* Aligns the divs to the start */
+      gap: 20px;
+      /* Adds space between the image and the content */
+      margin-top: 20px;
+      /* Optional, to give it a top margin */
+    }
+
+    .img-left {
+      height: 15vh;
+      width: 50vw;
+      display: flex;
+      justify-content: center;
+      /* Centers the image horizontally */
+      align-items: center;
+      /* Centers the image vertically */
+    }
+
+    .col-lg-6 {
+      flex: 2;
+      /* Takes up twice the width of the image */
+    }
+
+    .why-choose-us-main-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      /* Adds space between each .single-choose-us */
+    }
+
+    .single-choose-us {
+      display: contents;
+      align-items: center;
+      /* Centers the icon and text vertically */
+      gap: 15px;
+      /* Adds space between the icon and text */
+    }
+
+    /* Media Query for Mobile Devices */
+    @media (max-width: 768px) {
+      .container-about {
+        flex-direction: column;
+        /* Stack the image and content vertically */
+        align-items: flex-start;
+        /* Align items to the left on mobile */
+      }
+
+      .img-left {
+        margin-bottom: 20px;
+        /* Adds space between image and content */
+        width: fit-content;
+      }
+
+      .col-lg-6 {
+        flex: 0 0 100%;
+        /* Content div also takes full width on mobile */
+      }
+
+      /* Make content section full width */
+      .why-choose-us-main-wrapper {
+        gap: 10px;
+        /* Reduces the gap between content sections */
+      }
+
+      .mission h2 {
+        font-size: 2rem;
+        /* Adjust heading size for mobile */
+      }
+
+      .mission .disc-mission {
+        margin-left: 10%;
+        /* Reduces left margin on mobile */
+        margin-right: 10%;
+        /* Reduces right margin on mobile */
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+        /* Stack cards vertically on mobile */
+        gap: 15px;
+      }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW2B3PV89M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HW2B3PV89M');
+  </script>
+  <!-- Google Search -->
+
+  <meta name="google-site-verification" content="YaL9bjJrrw4NMWo8kMtrYa26zhWuCjb8xqnf5YWTL84">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["AboutPage", "WebPage"],
+      "@id": "https://gorehospital.com/about-us.html#webpage",
+      "url": "https://gorehospital.com/about-us.html",
+      "name": "About Gore Multispeciality Hospital",
+      "isPartOf": {
+        "@id": "https://gorehospital.com/#website"
+      },
+      "about": {
+        "@id": "https://gorehospital.com/#hospital"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": "https://gorehospital.com/about-us.html#primaryimage",
+        "url": "https://gorehospital.com/assets/group.png"
+      },
+      "inLanguage": "en-IN"
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://gorehospital.com/#website",
+      "url": "https://gorehospital.com/",
+      "name": "Gore Multispeciality Hospital",
+      "publisher": {
+        "@id": "https://gorehospital.com/#hospital"
+      }
+    },
+
+    {
+      "@type": "Hospital",
+      "@id": "https://gorehospital.com/#hospital",
+      "name": "Gore Multispeciality Hospital",
+      "url": "https://gorehospital.com/",
+      "logo": "https://gorehospital.com/assets/logo.jpeg",
+      "image": "https://gorehospital.com/assets/group.png",
+      "telephone": "+91 96895 28414",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sr. No. 13/1A, In front of Blooming International School, Sai Nagar, Mamurdi",
+        "addressLocality": "Pimpri-Chinchwad",
+        "addressRegion": "Maharashtra",
+        "postalCode": "412101",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.6400",
+        "longitude": "73.7500"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "10:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "name": "24x7 Emergency Services",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/goremultispecialityhospital",
+        "https://www.instagram.com/gore_multispeciality_hospital",
+        "https://www.linkedin.com/company/gore-multispecialty-hospital/about/",
+        "https://www.youtube.com/@Goremultispecialityhospital"
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gorehospital.com/about-us.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gorehospital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://gorehospital.com/about-us.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+
+<body>
+  <!-- header area start -->
+  <header class="header-one header--sticky">
+    <div class="header-top-area">
+      <div class="container-full-header">
+        <div class="col-lg-12">
+          <div class="header-top">
+            <div class="left">
+              <div class="map-area">
+                <i class="fa-sharp fa-regular fa-location-dot"></i>
+                <a href="https://maps.app.goo.gl/mQUofmKkM4vZiJsG9" target="_blank">Gore Multispeciality Hospital,
+                  Ravet, Pimpri Chinchwad
+                  PCMC </a>
+
+              </div>
+            </div>
+            <div class="social-media-icons">
+              <a href="https://www.facebook.com/gore.multispeciality.hospital" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="https://www.instagram.com/gore_multispeciality_hospital/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/gore-multispecialty-hospital/about/" target="_blank"
+                class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.youtube.com/@Goremultispecialityhospital" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+            <div class="right">
+              <div class="map-area">
+                <i class="fa-regular fa-phone"></i>
+                <a href="tel:+91 9689528414">24x7Emergency Line: +91 96895 28414</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-full-header">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-wrapper-1">
+            <div class="logo-area-start">
+              <a href="/index.html" class="logo">
+                <img width="100" src="assets/logo.jpeg" alt="lGore Hospital Logo">
+              </a>
+              <div class="nav-area">
+                <ul class="">
+                  <li class="main-nav">
+                    <a href="/index.html">Home</a>
+                  </li>
+
+                  <li class="main-nav mega-menu">
+                    <a href="/about-us.html">About</a>
+                  </li>
+
+                  <li class="main-nav has-dropdown mega-menu">
+                    <a href="#">Service</a>
+                    <div class="rts-mega-menu with-add">
+                      <div class="wrapper">
+                        <div class="row g-0">
+                          <div class="col-lg-9">
+                            <div class="menu-add-top-area">
+                              <h5 class="title">Our Treatments</h5>
+                            </div>
+                            <div class="row pl--30 pt--30">
+                              <!-- Col 1 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/cardiology.html">
+                                      <img src="assets/cardiology.png" alt="service" class="service-logo">Cardiology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pediatric.html">
+                                      <img src="assets/Paediatrics.png" alt="service"
+                                        class="service-logo">Paediatrics</a>
+                                  </li>
+                                  <!-- Neurology (not ready) -->
+                                  <li>
+                                    <a href="/services/neurology.html">
+                                      <img src="assets/nephrology.png" alt="service" class="service-logo">Neurology</a>
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <!-- Col 2 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/orthopaedics.html">
+                                      <img src="assets/orthopaedics.png" alt="service"
+                                        class="service-logo">Orthopaedics</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/family-physician.html">
+                                      <img src="assets/family-physician.png" alt="service" class="service-logo">Family
+                                      Physician</a>
+                                  </li>
+
+                                  <li>
+                                    <a href="/services/gynaecology.html">
+                                      <img src="assets/gynecology.png" alt="service" class="service-logo">Gynecology</a>
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <!-- Col 3 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/endocrinology.html">
+                                      <img src="assets/Endocrinolog.png" alt="service"
+                                        class="service-logo">Endocrinology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/nephrology.html">
+                                      <img src="assets/nephrology.png" alt="service" class="service-logo">Nephrology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/gastrology.html">
+                                      <img src="assets/gastrology-treatment.png" alt="service"
+                                        class="service-logo">Gastrology</a>
+                                  </li>
+
+
+                                </ul>
+                              </div>
+                              <!-- Col 4 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/ent.html">
+                                      <img src="assets/ent-img.png" alt="service" class="service-logo">ENT</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pulmonology.html">
+                                      <img src="assets/Pulmonology.png" alt="service"
+                                        class="service-logo">Pulmonology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/cancer-care.html">
+                                      <img src="assets/cancer-care-treatment.png" alt="service"
+                                        class="service-logo">Cancer
+                                      Care</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/radiology.html">
+                                      <img src="assets/radiology.png" alt="service" class="service-logo">Radiology</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Right side -->
+                          <div class="col-lg-3">
+                            <div class="menu-right-add">
+                              <img src="assets/01_menu.webp" alt="gore-hospital-image" loading="lazy">
+                              <div class="absolute-image">
+                                <img src="assets/02_menu.webp" alt="gore-hospital-image" loading="lazy">
+                                <div class="inner-content">
+                                  <h3 class="title">
+                                    Trust Your Heart to <br>
+                                    The Experts
+                                  </h3>
+                                  <a href="/appointment.html" class="rts-btn btn-primary">Appointment</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /Right -->
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="main-nav">
+                    <a href="./our-doctors.html">Our Doctors</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./blog.html">Blog</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./gallery.html">Gallery</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./contact-us.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-right">
+              <!-- search removed per request -->
+              <a href="/appointment.html" class="rts-btn btn-primary">Appointment
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy"></a>
+              <div class="menu-btn" id="menu-btn">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect width="20" height="2" fill="#1F1F25"></rect>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header area end -->
+
+  <!-- breadcrumb -->
+  <!-- About Us content (unchanged) -->
+  <div class="rts-section-gap">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 pe-lg-5">
+          <div class="about-image-left-wrapper" style="gap: 20px">
+            <div class="thumbnail-main move-right wow">
+              <img src="assets/team.png" alt="About Gore Hospital" style="border-radius: 22px" class="about-image" loading="lazy">
+            </div>
+            <div class="review-area">
+
+              <div class="stars-area">
+                <div class="wrapper">
+                  <div class="single">
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                  </div>
+                  <div class="single">
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                  </div>
+                  <div class="single">
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                  </div>
+                  <div class="single">
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                  </div>
+                  <div class="single">
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="content">
+                  <span>Reviews 4.8</span> |
+                  <span>2k reviews</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 ps-lg-5">
+          <div class="about-content-wrapper-right">
+            <h1 class="title">About Us - Gore Multispeciality Hospital</h1>
+            <p class="disc">
+              Welcome to Gore Multispeciality Hospital</strong>, where
+              your health and well-being always come first. We're more than
+              just a hospitalwe're a team of doctors, nurses, and caregivers
+              who believe in treating every patient like family.
+            </p>
+            <p class="disc">
+              Over the years, we've built a reputation as one of the most
+              trusted multispecialty hospitals</strong>, offering
+              everything from
+              routine checkups and preventive care</strong> to
+              emergency support and complex surgeries</strong>all in
+              one place. Our focus is simple:
+              <strong>making healthcare accessible, affordable, and
+                reliable</strong>
+              for every person who walks through our doors.
+            </p>
+
+            <div class="button-wrapper mt--20">
+              <a href="our-doctors.html" class="rts-btn btn-primary">Meet Our Doctors</a>
+              <a href="/appointment.html" class="rts-btn btn-primary" style="margin-left: 12px">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission Section with GSAP & Mobile Stacking -->
+      <!-- GSAP Mission Section Wrapper -->
+      <!-- IMPORTANT: overflow must be VISIBLE for sticky to work -->
+      <div class="mission-full-wrapper"
+        style="position: relative; overflow: visible !important; background-color: #fff; padding: 80px 0;">
+        <div class="container">
+          <div class="row mission-row" style="position: relative;">
+
+            <!-- LEFT SIDE: Pinned Content -->
+            <div class="col-lg-5 col-md-12 mission-left-col">
+              <div class="mission-left-content" style="padding-right: 30px; margin-bottom: 40px;">
+                <div class="icon-mission" style="margin-bottom: 30px;">
+                  <img src="/assets/01.svg" alt="Mission Icon" style="width: 80px; height: auto;" loading="lazy">
+                </div>
+
+                <h2 style="font-size: 48px; font-weight: 700; color: #1F1F25; margin-bottom: 20px; line-height: 1.2;">
+                  Our Mission
+                </h2>
+
+                <p style="font-size: 18px; line-height: 1.7; color: #555; margin-bottom: 30px;">
+                  At <strong>Gore Multispeciality Hospital</strong>, our mission
+                  goes beyond treating illnesseswe aim to make healthcare
+                  <strong style="color: #189ecb;">compassionate, accessible, and centered around every patient's
+                    needs</strong>.
+                </p>
+
+                <div
+                  style="width: 100px; height: 5px; background: linear-gradient(90deg, #189ecb, transparent); border-radius: 10px;">
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE: Cards List -->
+            <div class="col-lg-7 col-md-12 mission-right-col">
+              <div class="mission-cards-list"
+                style="display: flex; flex-direction: column; gap: 40px; position: relative;">
+
+                <!-- Card 1 -->
+                <div class="card mission-gsap-card">
+                  <div class="card-icon"><i class="fas fa-stethoscope"></i></div>
+                  <div class="card-content">
+                    <h3 class="card-title">Delivering Excellence in Healthcare</h3>
+                    <p class="card-text">Accurate diagnoses, effective treatments, and holistic care powered by modern
+                      medical technology.</p>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card mission-gsap-card">
+                  <div class="card-icon"><i class="fas fa-hand-holding-heart" style="color: rgb(24, 158, 203);"></i>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Putting Patients First</h3>
+                    <p class="card-text">Every decision and treatment plan focuses on <strong>safety, comfort, and
+                        recovery</strong>.</p>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card mission-gsap-card">
+                  <div class="card-icon"><i class="fas fa-clinic-medical" style="color: #17a2b8;"></i></div>
+                  <div class="card-content">
+                    <h3 class="card-title">Making Quality Healthcare Accessible</h3>
+                    <p class="card-text"><strong>Affordable treatment options</strong> without compromising quality.</p>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card mission-gsap-card">
+                  <div class="card-icon"><i class="fas fa-user-check" style="color: #28a745;"></i></div>
+                  <div class="card-content">
+                    <h3 class="card-title">Promoting Preventive Health</h3>
+                    <p class="card-text">Regular check-ups, vaccinations, and screenings to prevent illness.</p>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card mission-gsap-card">
+                  <div class="card-icon"><i class="fas fa-user-md" style="color: #6f42c1;"></i></div>
+                  <div class="card-content">
+                    <h3 class="card-title">Empowering Medical Professionals</h3>
+                    <p class="card-text">Continuous training so our teams stay aligned with the <strong>latest
+                        advancements</strong>.</p>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card mission-gsap-card">
+                  <div class="card-icon"><i class="fas fa-ambulance" style="color: #e74c3c;"></i></div>
+                  <div class="card-content">
+                    <h3 class="card-title">Being There in Emergencies</h3>
+                    <p class="card-text"><strong>24/7 emergency & trauma care</strong> when it matters most.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="container container-about-new">
+        <div class="row align-items-center any" style="display: flex !important; flex-wrap: wrap !important;">
+          <h2 class="title" style="
+                      font-size: 42px !important; 
+                      margin-bottom: 30px !important; 
+                      color: #1F1F25 !important;
+                      font-weight: 700 !important;">
+            Our Vision
+          </h2>
+
+          <!-- LEFT SIDE: Text Description & Chips -->
+          <div class="col-lg-6 col-md-12" style="padding-right: 30px !important;">
+            <div class="vision-content-left">
+              <!-- Vision Paragraph -->
+              <p class="disc-vision" style="
+                      text-align: left !important; 
+                      font-size: 16px !important; 
+                      line-height: 1.7 !important; 
+                      color: #555 !important; 
+                      margin-bottom: 30px !important;">
+                At <strong>Gore</strong>, our vision is a healthcare environment where every patient feels
+                <strong>safe, valued, and cared for</strong>. We combine
+                <strong>medical expertise, modern technology, and compassionate service</strong>
+                to be the trusted healthcare partner for familiespromoting
+                long-term wellness and a healthier future for our community.
+              </p>
+
+              <!-- Chips Wrapper -->
+              <div class="vision-chips-container"
+                style="display: flex !important; flex-direction: column !important; gap: 20px !important;">
+
+                <!-- Chip 1: Patient-Centric -->
+                <div class="single-choose-us-chip" style="
+                        display: flex !important; 
+                        align-items: center !important; 
+                        gap: 20px !important; 
+                        background: #fff !important; 
+                        padding: 15px !important; 
+                        border-radius: 12px !important; 
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;">
+
+                  <div class="icon-chip" style="
+                          background: #e8f3ff !important; 
+                          min-width: 60px !important; 
+                          height: 60px !important; 
+                          border-radius: 50% !important; 
+                          display: flex !important; 
+                          align-items: center !important; 
+                          justify-content: center !important;">
+                    <img src="assets/03_icon.svg" alt="patient-centric"
+                      style="width: 30px !important; height: auto !important;" loading="lazy">
+                  </div>
+
+                  <div class="info-chip">
+                    <h6 class="title"
+                      style="font-size: 18px !important; font-weight: 700 !important; margin-bottom: 5px !important; color: #1F1F25 !important;">
+                      Patient-Centric
+                    </h6>
+                    <p style="font-size: 14px !important; margin: 0 !important; color: #555 !important;">
+                      Respect for your needs, culture, and family values.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Chip 2: Continuous Improvement -->
+                <div class="single-choose-us-chip" style="
+                        display: flex !important; 
+                        align-items: center !important; 
+                        gap: 20px !important; 
+                        background: #fff !important; 
+                        padding: 15px !important; 
+                        border-radius: 12px !important; 
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;">
+
+                  <div class="icon-chip" style="
+                          background: #e8f3ff !important; 
+                          min-width: 60px !important; 
+                          height: 60px !important; 
+                          border-radius: 50% !important; 
+                          display: flex !important; 
+                          align-items: center !important; 
+                          justify-content: center !important;">
+                    <img src="assets/04_icon.svg" alt="continuous-improvement"
+                      style="width: 30px !important; height: auto !important;" loading="lazy">
+                  </div>
+
+                  <div class="info-chip">
+                    <h6 class="title"
+                      style="font-size: 18px !important; font-weight: 700 !important; margin-bottom: 5px !important; color: #1F1F25 !important;">
+                      Continuous Improvement
+                    </h6>
+                    <p style="font-size: 14px !important; margin: 0 !important; color: #555 !important;">
+                      Quality systems, feedback loops, and training.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: Heading & Animated SVG -->
+          <div class="col-lg-6 col-md-12" style="padding-left: 30px !important;">
+            <div class="vision-visual-right" style="
+                    text-align: center !important; 
+                    display: flex !important; 
+                    flex-direction: column !important; 
+                    align-items: center !important; 
+                    justify-content: center !important;
+                    margin-top: 30px !important;"> <!-- Added margin top for mobile spacing -->
+
+
+              <!-- Animated SVG Container -->
+              <div class="animated-svg-box" style="
+                      display: flex !important; 
+                      align-items: center !important; 
+                      justify-content: center !important;
+                      position: relative !important;">
+
+                <!-- The SVG Icon (Using existing Vision Icon) -->
+                <div id="lottie-animation"></div>
+
+                <!-- Background Glow Effect -->
+                <div class="glow-effect" style="
+                        position: absolute !important;
+                        top: 50% !important;
+                        left: 50% !important;
+                        transform: translate(-50%, -50%) !important;
+                        width: 120px !important;
+                        height: 120px !important;
+                        border-radius: 50% !important;
+                        z-index: 1 !important;">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- Meet Our Expert Doctors -->
+    <div class="container">
+      <div class="row g-5 mt--40 meet-doctor-area-sd">
+        <div class="col-lg-12   ">
+          <h2 class="title" style="font-size: 36px">
+            Meet Our Expert Doctors
+          </h2>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <article class="doc-card">
+            <div class="doc-photo">
+              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                <img src="assets/gore.png" alt="Dr. Dattesh Gore" loading="lazy">
+              </a>
+            </div>
+            <div class="doc-body">
+              <h3 class="doc-name"><a href="our-doctors.html" style="color: inherit; text-decoration: none;">Dr. Dattesh
+                  Gore</a></h3>
+              <p class="doc-spec">Family Physician</p>
+              <!-- <p class="doc-qual">Qualification if available</p> -->
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <article class="doc-card">
+            <div class="doc-photo">
+              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                <img src="#" alt="Dr. Chaitanya Kadam" loading="lazy">
+              </a>
+            </div>
+            <div class="doc-body">
+              <h3 class="doc-name"><a href="our-doctors.html" style="color: inherit; text-decoration: none;">Dr.
+                  Chaitanya Kadam</a></h3>
+              <p class="doc-spec">Obstetrics &amp; Gynaecology</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <article class="doc-card">
+            <div class="doc-photo">
+              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                <img src="#" alt="Dr. Vilas Mundkar" loading="lazy">
+              </a>
+            </div>
+            <div class="doc-body">
+              <h3 class="doc-name"><a href="our-doctors.html" style="color: inherit; text-decoration: none;">Dr. Vilas
+                  Mundkar</a></h3>
+              <p class="doc-spec">Internal Medicine &amp; Critical Care</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <div class="container">
+      <div class="request-appoinemnt-area-main-wrapper bg_image rts-section-gap mt--20">
+        <span class="pre">We're here for you</span>
+        <h2 class="title">
+          Have Questions?<br><span>Talk to Our Care Team</span>
+        </h2>
+        <a href="/contact-us.html" class="rts-btn btn-primary">Contact Us</a>
+      </div>
+    </div>
+    <!-- </div> -->
+    </section>
+
+    <!-- footer area start -->
+    <div id="footer-placeholder"></div>
+    <div id="side-bar" class="side-bar header-two">
+      <button class="close-icon-menu"><i class="far fa-times"></i></button>
+      <div class="mobile-menu-main">
+        <nav class="nav-main mainmenu-nav mt--30">
+          <ul class="mainmenu metismenu" id="mobile-menu-active">
+            <li><a href="/index.html" class="main">Home</a></li>
+            <li><a href="/about-us.html" class="main">About</a></li>
+
+            <li class="has-droupdown">
+              <a href="#" class="main">Service</a>
+              <ul class="submenu mm-collapse">
+                <li class="has-droupdown">
+                  <a href="#" class="main">Cardiac & Child Care</a>
+                  <ul class="submenu mm-collapse">
+                    <li>
+                      <a class="mobile-menu-link" href="/services/cardiology.html"><img src="assets/cardiology.png"
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Cardiology</a>
+                    </li>
+                    <li>
+                      <a class="mobile-menu-link" href="/services/pediatric.html"><img src="assets/Paediatrics.png"
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Paediatrics</a>
+                    </li>
+                    <li>
+                      <a class="mobile-menu-link" href="/services/neurology.html"><img src="assets/nephrology.png"
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Neurology</a>
+                    </li>
+
+                  </ul>
+                </li>
+
+                <li class="has-droupdown">
+                  <a href="#" class="main">Medicine & Skin</a>
+                  <ul class="submenu mm-collapse">
+                    <li>
+                      <a class="mobile-menu-link" href="/services/orthopaedics.html"><img src="assets/orthopaedics.png"
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Orthopaedics</a>
+                    </li>
+                    <li>
+                      <a class="mobile-menu-link" href="/services/family-physician.html"><img
+                          src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Family Physician</a>
+                    </li>
+
+                    <li>
+                      <a class="mobile-menu-link" href="/services/gynaecology.html"><img src="assets/gynecology.png"
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Gynecology</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="has-droupdown">
+                  <a href="#" class="main">Advanced Care</a>
+                  <ul class="submenu mm-collapse">
+                    <li>
+                      <a class="mobile-menu-link" href="/services/endocrinology.html"><img src="assets/Endocrinolog.png"
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Endocrinology</a>
+                    </li>
+                    <li>
+                      <a class="mobile-menu-link" href="/services/nephrology.html"><img src="assets/nephrology.png"
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Nephrology</a>
+                    </li>
+                    <li>
+                      <a class="mobile-menu-link" href="/services/cancer-care.html"><img
+                          src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Cancer Care</a>
+                    </li>
+                    <li>
+                      <a class="mobile-menu-link" href="/services/radiology.html"><img src="assets/radiology.png"
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        Radiology</a>
+                    </li>
+                  </ul>
+                </li>
+
+
+              </ul>
+            </li>
+            <li><a href="/blog.html" class="main">Blog</a></li>
+            <li><a href="/gallery.html" class="main">Gallery</a></li>
+            <li><a href="/contact-us.html" class="main">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- /mobile menu -->
+
+    <!-- loaders / progress -->
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <div id="anywhere-home"></div>
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/plugins/jquery.js"></script>
+    <script src="assets/js/plugins/jquery-ui.js"></script>
+    <script src="assets/js/vendor/waw.js"></script>
+    <script src="assets/js/plugins/swiper.js"></script>
+    <script src="assets/js/plugins/metismenu.js"></script>
+    <script src="assets/js/plugins/jarallax.js"></script>
+    <script src="assets/js/plugins/smooth-scroll.js"></script>
+    <script src="assets/js/plugins/magnifying-popup.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Doctor card gradient detection and reordering (UPDATED for doc-card) -->
+    <script>
+      (function () {
+        const genericImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
+        const genericImages2 = ["#"]; // Also handle empty or # src
+
+        const doctorSection = document.querySelector(".meet-doctor-area-sd");
+
+        if (!doctorSection) return;
+
+        // Get all columns containing doctor cards
+        const columns = Array.from(doctorSection.querySelectorAll(".col-lg-4"));
+        const columnsWithImages = [];
+        const columnsWithoutImages = [];
+
+        columns.forEach((column) => {
+          const card = column.querySelector(".doc-card");
+          if (!card) return; // Skip if no card found
+
+          const img = column.querySelector(".doc-photo img");
+          const imgSrc = img ? img.getAttribute("src") : "";
+          const filename = imgSrc.split("/").pop();
+
+          // Check if image is generic or empty/hash
+          if (genericImages.includes(filename) || imgSrc === "#" || imgSrc === "" || !imgSrc) {
+            card.classList.add("no-image");
+
+            // Add scanner line animation if not present
+            if (!card.querySelector('.scan-line')) {
+              const scanLine = document.createElement('div');
+              scanLine.className = 'scan-line';
+              const photoDiv = card.querySelector('.doc-photo');
+              if (photoDiv) photoDiv.appendChild(scanLine);
+            }
+
+            columnsWithoutImages.push(column);
+          } else {
+            columnsWithImages.push(column);
+          }
+        });
+
+        // Get the row parent
+        const row = doctorSection.querySelector(".row.g-5.mt--40");
+        if (!row) return;
+
+        // Remove all doctor columns
+        columns.forEach((col) => col.remove());
+
+        // Re-append in order: real images first, then gradient cards
+        columnsWithImages.forEach((col) => row.appendChild(col));
+        columnsWithoutImages.forEach((col) => row.appendChild(col));
+      })();
+    </script>
+    <script src="https://assets.taskade.com/embeds/latest/taskade-embed.min.js"></script>
+    <script type="module">
+      TaskadeEmbed.AgentPublicChatPopup.init({
+        publicAgentId: "01K7KBX8K63VVH2RR5VFFXVX9D",
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- GSAP Libraries (Ensure these are loaded) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- lottie file script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const mm = gsap.matchMedia();
+
+        // ============================================
+        // DESKTOP: Pin Left, Scroll Right
+        // ============================================
+        mm.add("(min-width: 992px)", () => {
+
+          // Pin the left content
+          // We calculate the end duration based on the difference in height
+          const rightCol = document.querySelector('.mission-right-col');
+          const leftContent = document.querySelector('.mission-left-content');
+
+          ScrollTrigger.create({
+            trigger: ".mission-row",
+            start: "top top+=100", // Start pinning when row hits 100px from top
+            end: () => `bottom bottom`, // Pin until the bottom of the row hits bottom of viewport
+            pin: ".mission-left-content",
+            pinSpacing: false, // Allows right side to scroll alongside
+            invalidateOnRefresh: true
+          });
+
+          // Optional: Fade in cards on desktop
+          gsap.utils.toArray(".mission-gsap-card").forEach((card, i) => {
+            gsap.from(card, {
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+              },
+              y: 50,
+              opacity: 0,
+              duration: 0.6
+            });
+          });
+        });
+
+        // ============================================
+        // MOBILE: Stack Cards Effect
+        // ============================================
+        mm.add("(max-width: 991px)", () => {
+
+          const cards = gsap.utils.toArray(".mission-gsap-card");
+
+          cards.forEach((card, i) => {
+            // 1. CALCULATE STICKY POSITIONS
+            // This creates the physical "stacking" behavior
+            // We start sticking at 15vh (so it clears the header) plus an offset for each card
+            const topOffset = 130 + (i * 45);
+
+            card.style.position = "sticky";
+            card.style.top = topOffset + "px";
+            card.style.zIndex = i + 1; // Ensure lower cards are on top
+
+            // 2. ANIMATION: Scale down previous card
+            // When the Current Card (card) scrolls up, the Previous Card (cards[i-1]) scales down
+            if (i > 0) {
+              const prevCard = cards[i - 1];
+
+              ScrollTrigger.create({
+                trigger: card, // Trigger based on the current card rising
+                start: "top " + (topOffset + 200), // When current card gets close to stacking
+                end: "top " + topOffset,   // When current card hits its sticky position
+                scrub: true,
+                onUpdate: (self) => {
+                  // Scale the PREVIOUS card down as THIS card covers it
+                  // We clamp the scale between 0.9 and 1
+                  const scale = 1 - (self.progress * 0.05); // Scale down to 0.95
+                  const opacity = 1 - (self.progress * 0.3); // Fade out slightly
+                  gsap.set(prevCard, { scale: scale, filter: `brightness(${opacity})` });
+                }
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      // Lottie animation setup
+      var animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-animation'), // The container element
+        renderer: 'svg', // Render method: 'svg', 'canvas', or 'html'
+        loop: true, // Whether the animation should loop
+        autoplay: true, // Whether the animation should start playing automatically
+        path: '/lottie/our-vision.json',
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid meet', // Ensures the animation fits in the container
+          scaleMode: 'scale', // This will scale the animation to fill the container
+        } // Path to your Lottie JSON file
+      });
+      var lottieContainer = document.getElementById('lottie-animation');
+    </script>
+
+    <script src="assets/js/form-integration.js"></script>
+    <script src="assets/js/footer.js"></script>
+</body>
+
+</html>

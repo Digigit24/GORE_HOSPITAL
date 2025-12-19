@@ -1,0 +1,17 @@
+# ----------------------------------------------------------------------
+# CLEAN SEO URL REWRITES
+# ----------------------------------------------------------------------
+
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Rewrite /post/slug or /post/slug/ to blog-post.html
+# This matches the dynamic JS update in blog-post.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^post/([^/]+)/?$ /blog-post.html [L,QSA]
+
+# Fallback: Redirect old formats to /post/slug/
+RewriteRule ^article/([^/]+)/?$ /post/$1/ [R=301,L]
+RewriteRule ^blog-post\.html/(.+)$ /post/$1/ [R=301,L]

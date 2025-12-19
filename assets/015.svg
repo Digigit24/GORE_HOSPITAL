@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Advanced ICU &amp; Emergency Units">
+  <g stroke="#3A86FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- ICU / monitor frame -->
+    <rect x="8" y="10" width="32" height="18" rx="3"></rect>
+
+    <!-- ECG line -->
+    <path d="M12 19h6l2-4 3 8 2-4h7"></path>
+
+    <!-- emergency cross -->
+    <path d="M30 12h4M32 10v4"></path>
+
+    <!-- stand -->
+    <path d="M20 28v4M28 28v4M16 32h16"></path>
+
+  </g>
+</svg>

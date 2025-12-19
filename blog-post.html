@@ -1,0 +1,1149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logo.jpeg">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Blogs | Gore Multispeciality Hospital, Ravet</title>
+  <meta name="description"
+    content="Detailed health article from Gore Multispeciality Hospital, Ravet. Learn more about diseases, treatments and preventive care from our specialist doctors.">
+  <meta property="og:title" content="Blogs | Gore Multispeciality Hospital, Ravet">
+  <meta property="og:description"
+    content="Detailed health article from Gore Multispeciality Hospital, Ravet. Learn more about diseases, treatments and preventive care from our specialist doctors.">
+  <meta property="og:image" content="#">
+  <meta property="og:url" content="https://gorehospital.com/blog-post.html">
+  <meta name="twitter:card" content="#">
+  <meta name="google-site-verification" content="dLZg1y3EKmULqa1WODeAoMWPpKHYPyCSZ_bHDZ_-xEI" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://gorehospital.com/blog-post.html">
+
+  <link rel="stylesheet" href="assets/css/plugins/plugins.css">
+  <link rel="stylesheet" href="assets/css/plugins/magnifying-popup.css">
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .single-post-wrapper {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px 20px 40px;
+      box-shadow: 0 8px 24px rgb(7, 35, 77);
+    }
+
+    .single-post-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .single-post-meta {
+      font-size: 14px;
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+
+    .single-post-meta span {
+      margin-right: 10px;
+    }
+
+    .single-post-featured {
+      margin-bottom: 20px;
+    }
+
+    .single-post-featured img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 380px;
+    }
+
+    .single-post-content {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .single-post-content img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .single-post-back {
+      margin-top: 25px;
+    }
+
+    .single-post-back a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 18px;
+      color: #2e71b8;
+      text-decoration: none;
+    }
+
+    .single-post-back a:hover {
+      text-decoration: underline;
+      color: #0f172a;
+    }
+
+    .post-loading,
+    .post-error {
+      text-align: center;
+      font-size: 15px;
+      color: #555;
+      padding: 40px 0;
+    }
+
+    .post-error {
+      color: #b02a37;
+    }
+
+    /* SIDEBAR */
+    .blog-sidebar {
+      position: relative;
+    }
+
+    .sidebar-widget {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 18px;
+    }
+
+    .sidebar-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    /* Search widget */
+    .sidebar-search-form {
+      display: flex;
+      gap: 8px;
+    }
+
+    .sidebar-search-input {
+      flex: 1;
+      border: 1px solid #d1d5db;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .sidebar-search-input:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 1px rgba(13, 110, 253, 0.15);
+    }
+
+    .sidebar-search-btn {
+      border-radius: 999px;
+      border: none;
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      background: #0d6efd;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .sidebar-search-btn i {
+      font-size: 13px;
+    }
+
+    .sidebar-search-btn:hover {
+      background: #0b5ed7;
+    }
+
+    /* Base table styling inside blog content */
+    .single-post-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 15px;
+      line-height: 1.5;
+      border: #111827 2px solid;
+    }
+
+    /* Cells */
+    .single-post-content th,
+    .single-post-content td {
+      border: 1px solid #010306;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    /* Header row */
+    .single-post-content thead th {
+      background-color: #f4f7ff;
+      color: #111827;
+      font-weight: 600;
+    }
+
+    /* Zebra rows */
+    .single-post-content tbody tr:nth-child(even) {
+      background-color: #f9fafb;
+    }
+
+    /* Hover */
+    .single-post-content tbody tr:hover {
+      background-color: #eef2ff;
+    }
+
+    /* ---------- RESPONSIVE PART ---------- */
+
+    /* 1) Horizontal scroll wrapper for small screens */
+    .single-post-content .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Keep some minimum width so columns don't crush */
+    .single-post-content .table-wrapper table {
+      min-width: 550px;
+    }
+
+    /* 2) Slightly smaller text / padding on tablets & mobiles */
+    @media (max-width: 991.98px) {
+      .single-post-content table {
+        font-size: 14px;
+      }
+
+      .single-post-content th,
+      .single-post-content td {
+        padding: 8px 10px;
+      }
+    }
+
+    /* 3) Extra tweaks for very small screens */
+    @media (max-width: 575.98px) {
+      .single-post-content table {
+        font-size: 13px;
+      }
+
+      .single-post-content th,
+      .single-post-content td {
+        padding: 6px 8px;
+      }
+
+      /* Optional: allow long words / numbers to wrap instead of breaking layout */
+      .single-post-content th,
+      .single-post-content td {
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+      }
+    }
+
+    /* Latest posts widget */
+    /* Latest posts widget */
+    .latest-posts-sidebar {
+      background: #ffffff;
+      /* ‘‰ new background */
+      border-radius: 14px;
+      padding: 14px 12px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      color: #0f172a;
+      /* ‘‰ text color */
+    }
+
+    .latest-posts-inner h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #0f172a;
+      /* ‘‰ heading color */
+    }
+
+    .latest-posts-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .latest-posts-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
+    }
+
+    .latest-posts-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    /* Small thumbnail */
+    .latest-post-thumb {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .latest-post-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Text area */
+    .latest-post-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .latest-post-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .latest-post-title {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: #0f172a;
+      margin-bottom: 3px;
+    }
+
+    .latest-post-link:hover .latest-post-title {
+      text-decoration: underline;
+      color: #0d6efd;
+    }
+
+    .latest-post-date {
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    /* Responsive tweaks for sidebar widget */
+    @media (max-width: 767.98px) {
+      .latest-posts-sidebar {
+        padding: 12px 10px;
+      }
+
+      .latest-post-title {
+        font-size: 12px;
+      }
+
+      .latest-post-thumb {
+        width: 46px;
+        height: 46px;
+      }
+    }
+
+
+    @media (max-width: 991.98px) {
+      .single-post-wrapper {
+        margin-top: 20px;
+      }
+
+      .blog-sidebar {
+        margin-top: 25px;
+      }
+    }
+
+    .social-icon {
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+      margin-left: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #fefefe;
+      transform: scale(1.2);
+    }
+
+    .sidebar-search-btn {
+      width: 10%;
+    }
+
+    /* Links inside the article body (content coming from WordPress) */
+    .single-post-content a {
+      color: #0d6efd;
+      /* normal link color */
+    }
+
+    .single-post-content a:hover {
+      color: #0a58ca;
+      /* hover color */
+      text-decoration: underline;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW2B3PV89M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-HW2B3PV89M');
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const content = document.querySelector(".single-post-content");
+      if (!content) return;
+
+      const tables = content.querySelectorAll("table");
+      tables.forEach((table) => {
+        if (!table.parentElement.classList.contains("table-wrapper")) {
+          const wrapper = document.createElement("div");
+          wrapper.className = "table-wrapper";
+          table.parentNode.insertBefore(wrapper, table);
+          wrapper.appendChild(table);
+        }
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+  <!-- header area start -->
+  <header class="header-one header--sticky">
+    <div class="header-top-area">
+      <div class="container-full-header">
+        <div class="col-lg-12">
+          <div class="header-top">
+            <div class="left">
+              <div class="map-area">
+                <i class="fa-sharp fa-regular fa-location-dot"></i>
+                <a href="https://share.google/1o4ABacpA4B04frhC">
+                  Gore Multispeciality Hospital, Ravet, Pimpri Chinchwad (PCMC)
+                </a>
+              </div>
+            </div>
+            <div class="social-media-icons">
+              <a href="https://www.facebook.com/gore.multispeciality.hospital" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/gore_multispeciality_hospital/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/gore-multispecialty-hospital/about/" target="_blank"
+                class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.youtube.com/@Goremultispecialityhospital" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+            <div class="right">
+              <div class="map-area">
+                <i class="fa-regular fa-phone"></i>
+                <a href="tel:+91 9689528414">24x7Emergency Line: +91 96895 28414</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-full-header">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-wrapper-1">
+            <div class="logo-area-start">
+              <a href="/index.html" class="logo">
+                <img width="100" src="assets/logo.jpeg" alt="lGore Hospital Logo">
+              </a>
+              <div class="nav-area">
+                <ul class="">
+                  <li class="main-nav">
+                    <a href="/index.html">Home</a>
+                  </li>
+                  <li class="main-nav mega-menu">
+                    <a href="/about-us.html">About</a>
+                  </li>
+                  <li class="main-nav has-dropdown mega-menu">
+                    <a href="#">Service</a>
+                    <div class="rts-mega-menu with-add">
+                      <div class="wrapper">
+                        <div class="row g-0">
+                          <div class="col-lg-9">
+                            <div class="menu-add-top-area">
+                              <h5 class="title">Our Treatments</h5>
+                            </div>
+                            <div class="row pl--30 pt--30">
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/cardiology.html">
+                                      <img src="assets/cardiology.png" alt="service" class="service-logo">Cardiology
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pediatric.html">
+                                      <img src="assets/Paediatrics.png" alt="service" class="service-logo">Paediatrics
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/neurology.html">
+                                      <img src="assets/nephrology.png" alt="service" class="service-logo">Neurology
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/orthopaedics.html">
+                                      <img src="assets/orthopaedics.png" alt="service" class="service-logo">Orthopaedics
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/family-physician.html">
+                                      <img src="assets/family-physician.png" alt="service" class="service-logo">Family
+                                      Physician
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/gynaecology.html">
+                                      <img src="assets/gynecology.png" alt="service" class="service-logo">Gynecology
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/endocrinology.html">
+                                      <img src="assets/Endocrinolog.png" alt="service"
+                                        class="service-logo">Endocrinology
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/nephrology.html">
+                                      <img src="assets/nephrology.png" alt="service" class="service-logo">Nephrology
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/gastrology.html">
+                                      <img src="assets/gastrology-treatment.png" alt="service"
+                                        class="service-logo">Gastrology
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/ent.html">
+                                      <img src="assets/ent-img.png" alt="service" class="service-logo">ENT
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pulmonology.html">
+                                      <img src="assets/Pulmonology.png" alt="service" class="service-logo">Pulmonology
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/cancer-care.html">
+                                      <img src="assets/cancer-care-treatment.png" alt="service"
+                                        class="service-logo">Cancer Care
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/radiology.html">
+                                      <img src="assets/radiology.png" alt="service" class="service-logo">Radiology
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="menu-right-add">
+                              <img src="assets/01_menu.webp" alt="gore-hospital-image">
+                              <div class="absolute-image">
+                                <img src="assets/02_menu.webp" alt="gore-hospital-image">
+                                <div class="inner-content">
+                                  <h3 class="title">
+                                    Trust Your Heart to <br>
+                                    The Experts
+                                  </h3>
+                                  <a href="/appointment.html" class="rts-btn btn-primary">Appointment</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./our-doctors.html">Our Doctors</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./blog.html">Blog</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./gallery.html">Gallery</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./contact-us.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-right">
+              <a href="/appointment.html" class="rts-btn btn-primary">
+                Appointment
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image">
+              </a>
+              <div class="menu-btn" id="menu-btn">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect width="20" height="2" fill="#1F1F25"></rect>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header area end -->
+
+
+
+  <!-- Single post + sidebar -->
+  <div class="rts-section-gapTop rts-section-gapBottom">
+    <div class="container">
+      <div class="row">
+        <!-- Main post -->
+        <div class="col-lg-8 col-md-12">
+          <div id="post-container" class="single-post-wrapper">
+            <div class="post-loading">Loading article...</div>
+          </div>
+        </div>
+
+        <!-- Sidebar: Search + Latest posts -->
+        <div class="col-lg-4 col-md-12">
+          <aside class="blog-sidebar">
+            <!-- Search widget -->
+            <div class="sidebar-widget">
+              <h3 class="sidebar-title">Search Health Articles</h3>
+              <form id="search-form" action="" method="get" class="sidebar-search-form">
+                <input type="text" name="search" id="search-input" placeholder="Type keyword..."
+                  class="sidebar-search-input" />
+                <button type="submit" class="sidebar-search-btn">
+                  <i class="fa fa-search"></i>
+                </button>
+              </form>
+            </div>
+
+            <!-- Latest posts widget -->
+            <div class="sidebar-widget latest-posts-sidebar">
+              <div class="latest-posts-inner">
+                <h4>Latest Articles</h4>
+                <ul id="latest-posts-list" class="latest-posts-list"></ul>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <!-- mobile menu -->
+  <div id="side-bar" class="side-bar header-two">
+    <button class="close-icon-menu"><i class="far fa-times"></i></button>
+    <div class="mobile-menu-main">
+      <nav class="nav-main mainmenu-nav mt--30">
+        <ul class="mainmenu metismenu" id="mobile-menu-active">
+          <li><a href="/index.html" class="main">Home</a></li>
+          <li><a href="/about-us.html" class="main">About</a></li>
+          <li class="has-droupdown">
+            <a href="#" class="main">Service</a>
+            <ul class="submenu mm-collapse">
+              <li class="has-droupdown">
+                <a href="#" class="main">Cardiac & Child Care</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/cardiology.html">
+                      <img src="assets/cardiology.png" alt="gore-hospital-image" style="max-width:33px;">Cardiology
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/pediatric.html">
+                      <img src="assets/Paediatrics.png" alt="gore-hospital-image" style="max-width:33px;">Paediatrics
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/neurology.html">
+                      <img src="assets/nephrology.png" alt="gore-hospital-image" style="max-width:33px;">Neurology
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-droupdown">
+                <a href="#" class="main">Medicine & Skin</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/orthopaedics.html">
+                      <img src="assets/orthopaedics.png" alt="gore-hospital-image" style="max-width:33px;">Orthopaedics
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/family-physician.html">
+                      <img src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;">Family
+                      Physician
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/gynaecology.html">
+                      <img src="assets/gynecology.png" alt="gore-hospital-image" style="max-width:33px;">Gynecology
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-droupdown">
+                <a href="#" class="main">Advanced Care</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/endocrinology.html">
+                      <img src="assets/Endocrinolog.png" alt="gore-hospital-image" style="max-width:33px;">Endocrinology
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/nephrology.html">
+                      <img src="assets/nephrology.png" alt="gore-hospital-image" style="max-width:33px;">Nephrology
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/cancer-care.html">
+                      <img src="assets/cancer-care-treatment.png" alt="gore-hospital-image"
+                        style="max-width:33px;">Cancer Care
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/radiology.html">
+                      <img src="assets/radiology.png" alt="gore-hospital-image" style="max-width:33px;">Radiology
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/blog.html" class="main">Blog</a></li>
+          <li><a href="/gallery.html" class="main">Gallery</a></li>
+          <li><a href="/contact-us.html" class="main">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+  <div id="anywhere-home"></div>
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+    </svg>
+  </div>
+
+  <script src="assets/js/plugins/jquery.js"></script>
+  <script src="assets/js/plugins/jquery-ui.js"></script>
+  <script src="assets/js/vendor/waw.js"></script>
+  <script src="assets/js/plugins/swiper.js"></script>
+  <script src="assets/js/plugins/metismenu.js"></script>
+  <script src="assets/js/plugins/jarallax.js"></script>
+  <script src="assets/js/plugins/smooth-scroll.js"></script>
+  <script src="assets/js/plugins/magnifying-popup.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Single post + latest posts fetch script -->
+  <script>
+    // WordPress.com API base
+    const WP_BASE_URL =
+      "https://public-api.wordpress.com/wp/v2/sites/goreblogs8.wordpress.com";
+    // Reuse same image logic as main blog page
+    function getImageUrl(post) {
+      let imageUrl = "";
+
+      // 1) Featured image from _embedded
+      if (
+        post._embedded &&
+        post._embedded["wp:featuredmedia"] &&
+        post._embedded["wp:featuredmedia"][0] &&
+        post._embedded["wp:featuredmedia"][0].source_url
+      ) {
+        imageUrl = post._embedded["wp:featuredmedia"][0].source_url;
+      } else {
+        // 2) Fallback: first <img> in content
+        const content = post.content?.rendered || "";
+        const match = content.match(/<img[^>]+src="([^">]+)"/i);
+        if (match && match[1]) {
+          imageUrl = match[1];
+        }
+      }
+
+      return imageUrl;
+    }
+
+
+    // ”¹ Custom SEO per POST SLUG
+    // Change these keys & texts to match your real posts
+    const postSeoMap = {
+      "irregular-periods-in-teens-causes-symptoms-effective-treatments-explained": {
+        metaTitle:
+          "Irregular Periods in Teens: Causes, Symptoms & Effective Treatments ",
+        metaDescription:
+          "Irregular periods in teens explained discover causes, symptoms, and effective treatments. Learn when to seek care and how Gore Hospital supports teen health."
+      },
+      "what-are-the-most-common-ent-surgeries": {
+        metaTitle: "What Are the Most Common ENT Surgeries?",
+        metaDescription:
+          "Learn about the Most Common ENT Surgeries, their benefits, and recovery tips. Gore Hospital provides advanced care for sinus, ear, and throat conditions."
+      },
+      "signs-your-sports-injury-needs-arthroscopic-surgery-immediately": {
+        metaTitle: "Signs You Need Arthroscopic Surgery for Sports Injury",
+        metaDescription:
+          "Learn the Signs Your Sports Injury Needs Arthroscopic Surgery Immediately. Discover persistent pain, swelling, instability, and when to act fast."
+      },
+      "minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain": {
+        metaTitle:
+          "Minimally Invasive Orthopaedic Surgery  -  Fast Recovery",
+        metaDescription:
+          "Minimally invasive orthopaedic surgery at Gore Hospital ensures less pain, faster recovery, smaller scars, and a safe, comfortable return to daily life."
+      }
+      // ‘‰ Add more entries: "<slug-from-wordpress>": { metaTitle: "...", metaDescription: "..." }
+    };
+
+    function stripHTML(html) {
+      const div = document.createElement("div");
+      div.innerHTML = html || "";
+      return div.textContent || div.innerText || "";
+    }
+
+    function getQueryParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    function showPostError(message) {
+      const container = document.getElementById("post-container");
+      if (container) {
+        container.innerHTML = `<div class="post-error">${message}</div>`;
+      }
+    }
+
+    function setMetaTag(name, content) {
+      if (!content) return;
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("name", name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    }
+
+    function setOgTag(property, content) {
+      if (!content) return;
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("property", property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    }
+
+    // --- SEO URL Helper ---
+    function toSeoSlug(text) {
+      if (!text) return "";
+      return text
+        .toString()
+        .toLowerCase()
+        .replace(/\s+/g, "-") // Replace spaces with -
+        .replace(/[^\w-]+/g, "") // Remove all non-word chars (except -)
+        .replace(/--+/g, "-") // Replace multiple - with single -
+        .replace(/^-+/, "") // Trim - from start of text
+        .replace(/-+$/, ""); // Trim - from end of text
+    }
+
+    async function loadSinglePost() {
+      const container = document.getElementById("post-container");
+
+      // 1. Identification: Detect slug or postId from query parameters
+      const slugParam = getQueryParam("slug");
+      const postIdParam = getQueryParam("postId");
+
+      // Fallback for paths if already transformed
+      const path = window.location.pathname;
+      const pathMatch = path.match(/\/post\/([^/]+)\/?$/);
+      const pathSlug = pathMatch ? pathMatch[1] : null;
+
+      if (!slugParam && !postIdParam && !pathSlug) {
+        showPostError("No article selected. Please go back to the blog list.");
+        return;
+      }
+
+      try {
+        let post;
+        let slugForSeo;
+
+        if (slugParam || pathSlug) {
+          // ” Fetch by slug
+          const targetSlug = slugParam || pathSlug;
+          const res = await fetch(
+            `${WP_BASE_URL}/posts?slug=${encodeURIComponent(
+              targetSlug
+            )}&_embed=1`
+          );
+
+          if (!res.ok) {
+            showPostError("Unable to load this article right now.");
+            return;
+          }
+
+          const posts = await res.json();
+          if (!posts.length) {
+            showPostError("Article not found.");
+            return;
+          }
+
+          post = posts[0];
+          slugForSeo = post.slug;
+        } else {
+          // ” Fallback: fetch by ID (when link is blog-post.html?postId=123)
+          const res = await fetch(
+            `${WP_BASE_URL}/posts/${encodeURIComponent(postIdParam)}?_embed=1`
+          );
+
+          if (!res.ok) {
+            showPostError("Unable to load this article right now.");
+            return;
+          }
+
+          post = await res.json();
+          slugForSeo = post.slug; // use actual slug for SEO map
+        }
+
+        // --- DYNAMIC URL UPDATE (No Reload) ---
+        const finalSlug = toSeoSlug(slugForSeo);
+        if (finalSlug) {
+          const newUrl = `/blogs/${finalSlug}/`;
+          window.history.replaceState({ postId: post.id }, post.title?.rendered || "", newUrl);
+        }
+
+        const title = post.title?.rendered || "Health Article";
+        const rawContent = post.content?.rendered || "";
+        const plainContent = stripHTML(rawContent).trim();
+
+        const date = new Date(post.date).toLocaleDateString("en-IN", {
+          day: "2-digit",
+          month: "short",
+          year: "numeric"
+        });
+
+        // Featured image
+        let imageUrl = "";
+        if (
+          post._embedded &&
+          post._embedded["wp:featuredmedia"] &&
+          post._embedded["wp:featuredmedia"][0] &&
+          post._embedded["wp:featuredmedia"][0].source_url
+        ) {
+          imageUrl = post._embedded["wp:featuredmedia"][0].source_url;
+        }
+
+        // Optional: remove first inline image from content if featured already shown
+        let content = rawContent;
+        if (imageUrl) {
+          const firstImgMatch = content.match(/<img[^>]*>/i);
+          if (firstImgMatch) {
+            content = content.replace(firstImgMatch[0], "");
+          }
+        }
+
+        // ---------- œ… SEO OVERRIDES ----------
+        const override = postSeoMap[slugForSeo];
+        const cleanTitle = stripHTML(title);
+
+        let metaTitle;
+        let metaDescription;
+
+        if (override) {
+          // Use your custom text from postSeoMap
+          metaTitle = override.metaTitle;
+          metaDescription = override.metaDescription;
+        } else {
+          // Fallback if slug not in map
+          metaTitle = `${cleanTitle} | Gore Multispeciality Hospital, Ravet`;
+          metaDescription =
+            plainContent || "Health article from Gore Multispeciality Hospital, Ravet.";
+          if (metaDescription.length > 160) {
+            metaDescription = metaDescription.slice(0, 157) + "...";
+          }
+        }
+
+        // <title>
+        document.title = metaTitle;
+
+        // <meta name="description">
+        setMetaTag("description", metaDescription);
+
+        // OG / social tags
+        const currentUrl = window.location.href;
+        setOgTag("og:title", metaTitle);
+        setOgTag("og:description", metaDescription);
+        setOgTag("og:url", currentUrl);
+        if (imageUrl) setOgTag("og:image", imageUrl);
+
+        // ---------- œ… RENDER ARTICLE ----------
+        container.innerHTML = `
+        <h1 class="single-post-title">${title}</h1>
+        <div class="single-post-meta">
+          <span><i class="far fa-calendar"></i> ${date}</span>
+        </div>
+
+        ${imageUrl
+            ? `
+          <div class="single-post-featured">
+            <img src="${imageUrl}" alt="${cleanTitle.replace(
+              /"/g,
+              "&quot;"
+            )}">
+          </div>
+        `
+            : ""
+          }
+
+        <div class="single-post-content">
+          ${content}
+        </div>
+
+        <div class="single-post-back">
+          <a href="/blog.html">
+            <i class="fas fa-arrow-left"></i> Back to all articles
+          </a>
+        </div>
+      `;
+      } catch (error) {
+        console.error(error);
+        showPostError("Something went wrong. Please try again later.");
+      }
+    }
+
+    // Latest posts list in sidebar (linked by slug)
+    // Latest posts list in sidebar (with thumbnails)
+    async function fetchLatestSidebarPosts(limit = 5) {
+      const listEl = document.getElementById("latest-posts-list");
+      if (!listEl) return;
+
+      try {
+        const url = `${WP_BASE_URL}/posts?per_page=${limit}&page=1&_embed=1&orderby=date`;
+        const res = await fetch(url);
+        if (!res.ok) {
+          listEl.innerHTML = "<li>Unable to load latest posts.</li>";
+          return;
+        }
+
+        const posts = await res.json();
+        if (!posts.length) {
+          listEl.innerHTML = "<li>No recent articles yet.</li>";
+          return;
+        }
+
+        const fallbackThumb = "assets/images/blog/latest-thumb.jpg"; // make sure this file exists
+
+        const itemsHtml = posts
+          .map((post) => {
+            const title = stripHTML(post.title?.rendered || "");
+            const date = new Date(post.date).toLocaleDateString("en-IN", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric"
+            });
+            const slug = post.slug;
+            const link = `/blog-post.html?slug=${slug}`;
+
+            let imageUrl = getImageUrl(post);
+            if (!imageUrl) {
+              imageUrl = fallbackThumb;
+            }
+
+            return `
+          <li class="latest-posts-item">
+            <a href="${link}" class="latest-post-link">
+              <div class="latest-post-thumb">
+                <img src="${imageUrl}" alt="${title}" loading="lazy">
+              </div>
+              <div class="latest-post-text">
+                <div class="latest-post-title">${title}</div>
+                <span class="latest-post-date">${date}</span>
+              </div>
+            </a>
+          </li>
+        `;
+          })
+          .join("");
+
+        listEl.innerHTML = itemsHtml;
+      } catch (err) {
+        console.error(err);
+        listEl.innerHTML = "<li>Unable to load latest posts.</li>";
+      }
+    }
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadSinglePost();
+      fetchLatestSidebarPosts();
+
+      // Listen for browser back/forward buttons
+      window.addEventListener("popstate", () => {
+        loadSinglePost();
+      });
+
+
+
+      const searchForm = document.getElementById("search-form");
+      if (searchForm) {
+        searchForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const termInput = document.getElementById("search-input");
+          const term = termInput ? termInput.value.trim() : "";
+          const targetUrl = term
+            ? `blog.html?search=${encodeURIComponent(term)}`
+            : "blog.html";
+          window.location.href = targetUrl;
+        });
+      }
+    });
+  </script>
+
+
+
+  <script src="assets/js/footer.js"></script>
+</body>
+
+</html>

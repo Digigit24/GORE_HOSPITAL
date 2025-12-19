@@ -1,0 +1,1402 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logo.jpeg">
+  <title>Our Doctors | Gore Multispeciality Hospital</title>
+  <meta name="description"
+    content="Meet expert doctors at Gore Multispeciality Hospital, Ravet (PCMC). Trusted specialists in medicine, surgery, paediatrics, cardiology, orthopedics and more.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gorehospital.com/">
+  <meta property="og:title" content="Best Multispeciality Hospitalin Ravet, Pimpri Chinchwad">
+  <meta property="og:description"
+    content="Meet expert doctors at Gore Multispeciality Hospital, Ravet (PCMC). Trusted specialists in medicine, surgery, paediatrics, cardiology, orthopedics and more.">
+  <meta property="og:image"
+    content="https://gorehospital.com/images/doctor-gore-multispeciality-hospital-ravet-pimpri-chinchwad-pune.png">
+
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:url" content="https://gorehospital.com/">
+  <meta name="twitter:title" content="Best Multispeciality Hospitalin Ravet, Pimpri Chinchwad">
+  <meta name="twitter:description"
+    content="Meet expert doctors at Gore Multispeciality Hospital, Ravet (PCMC). Trusted specialists in medicine, surgery, paediatrics, cardiology, orthopedics and more.">
+  <meta name="twitter:image"
+    content="https://gorehospital.com/images/doctor-gore-multispeciality-hospital-ravet-pimpri-chinchwad-pune.png">
+
+  <meta name="google-site-verification" content="dLZg1y3EKmULqa1WODeAoMWPpKHYPyCSZ_bHDZ_-xEI" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://gorehospital.com/our-doctors.html">
+
+  <!-- Project styles -->
+  <link rel="stylesheet" href="assets/css/plugins/plugins.css">
+  <link rel="stylesheet" href="assets/css/plugins/magnifying-popup.css">
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    :root {
+      --text: #1f1f25;
+      --muted: #5b5b63;
+      --card-bg: #ffffff;
+      --card-bd: rgba(0, 0, 0, 0.06);
+      --soft: 0 6px 24px rgba(0, 0, 0, 0.06);
+      --soft-2: 0 12px 32px rgba(0, 0, 0, 0.07);
+      --silver-gradient: linear-gradient(135deg,
+          #f8f9fa 0%,
+          #e9ecef 50%,
+          #dee2e6 100%);
+    }
+
+    /* disabled/greyscale utility for not-ready links */
+    .disabled-link {
+      pointer-events: none;
+      filter: grayscale(100%);
+      opacity: 0.55;
+    }
+
+    .disabled-link img {
+      filter: grayscale(100%);
+      opacity: 0.85;
+    }
+
+    /* ---------- Page basics ---------- */
+    body {
+      color: var(--text);
+    }
+
+    .container-80 {
+      max-width: 85%;
+      margin-inline: auto;
+      padding-inline: 12px;
+      gap: 22px;
+    }
+
+    /* Safe space below sticky header */
+    .doc-hero {
+      padding-top: 110px;
+      padding-bottom: 28px;
+      background: #f9fafc;
+    }
+
+    @media (max-width: 575.98px) {
+      .doc-hero {
+        padding-top: 96px;
+        padding-bottom: 22px;
+      }
+    }
+
+    .doc-hero .title {
+      font-size: clamp(28px, 1.4vw, 42px);
+      font-weight: 600;
+      margin: 0 0 8px;
+      line-height: 1.15;
+      letter-spacing: 0.2px;
+    }
+
+    .doc-hero .disc {
+      font-size: clamp(16px, 1.7vw, 18px);
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ---------- Doctors grid ---------- */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin: 40px 0 80px;
+    }
+
+    .doc-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      /* Soft, premium shadow */
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      height: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.02);
+    }
+
+    .doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .doc-photo {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      /* Square - Professional & Consistent */
+      background: #f8f9fa;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .doc-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .doc-card:hover .doc-photo img {
+      transform: scale(1.08);
+      /* Subtle zoom */
+    }
+
+    /* Details Section */
+    .doc-body {
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center align for premium feel */
+      text-align: center;
+      gap: 6px;
+      flex-grow: 1;
+      background: #fff;
+      z-index: 5;
+      position: relative;
+    }
+
+    .doc-name {
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 1.3;
+      margin: 0;
+      color: #1a202c;
+      letter-spacing: -0.3px;
+    }
+
+    .doc-spec {
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #007bff;
+      /* Medical Blue accent */
+      margin-top: 2px;
+    }
+
+    .doc-qual {
+      font-size: 14px;
+      color: #718096;
+      margin: 0;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    /* ---------- Empty State (Creative & Professional) ---------- */
+    .doc-card.no-image .doc-photo {
+      background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    }
+
+    .doc-card.no-image .doc-photo img {
+      position: static;
+      width: 80px;
+      height: 80px;
+      opacity: 0.4;
+      object-fit: contain;
+      filter: grayscale(100%);
+      animation: pulse-logo 3s infinite ease-in-out;
+      display: block !important;
+    }
+
+    @keyframes pulse-logo {
+      0% {
+        opacity: 0.3;
+        transform: scale(0.95);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+      }
+
+      100% {
+        opacity: 0.3;
+        transform: scale(0.95);
+      }
+    }
+
+    .doc-card.no-image .doc-photo img {
+      display: none !important;
+    }
+
+    /* The Scanner Bar Animation */
+    .scan-line {
+      position: absolute;
+      top: -10%;
+      left: 0;
+      width: 100%;
+      height: 15%;
+      background: linear-gradient(180deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.9) 50%,
+          transparent 100%);
+      filter: blur(4px);
+      opacity: 0.7;
+      z-index: 2;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .doc-card.no-image .doc-body {
+      background: #ffffff;
+      justify-content: flex-start;
+      height: auto;
+      min-height: 110px;
+    }
+
+    /* Scroll reveal (no flicker) */
+    .doctor-card-io {
+      visibility: visible !important;
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.55s ease, transform 0.55s ease,
+        box-shadow 0.25s ease;
+      will-change: opacity, transform;
+    }
+
+    .doctor-card-io.is-hidden {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .doctor-card-io.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .is-disabled,
+    .is-disabled * {
+      filter: grayscale(100%) opacity(0.55);
+      pointer-events: none;
+      cursor: not-allowed !important;
+      text-decoration: none !important;
+    }
+
+    .social-icon {
+      color: white;
+      /* White color for the icons */
+      font-size: 15px;
+      /* Icon size */
+      text-decoration: none;
+      /* Remove underline */
+      margin-left: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #fefefe;
+      /* Change color on hover */
+      transform: scale(1.2);
+      /* Slightly increase the size of the icon */
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW2B3PV89M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HW2B3PV89M');
+  </script>
+  <!-- Google Search -->
+
+  <meta name="google-site-verification" content="YaL9bjJrrw4NMWo8kMtrYa26zhWuCjb8xqnf5YWTL84">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["CollectionPage", "WebPage"],
+      "@id": "https://gorehospital.com/our-doctors.html#webpage",
+      "url": "https://gorehospital.com/our-doctors.html",
+      "name": "Our Doctors - Gore Multispeciality Hospital",
+      "isPartOf": { "@id": "https://gorehospital.com/#website" },
+      "about": { "@id": "https://gorehospital.com/#hospital" },
+      "mainEntity": { "@id": "https://gorehospital.com/our-doctors.html#doctors" },
+      "inLanguage": "en-IN"
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://gorehospital.com/#website",
+      "url": "https://gorehospital.com/",
+      "name": "Gore Multispeciality Hospital",
+      "publisher": { "@id": "https://gorehospital.com/#hospital" }
+    },
+
+    {
+      "@type": ["Hospital", "MedicalOrganization"],
+      "@id": "https://gorehospital.com/#hospital",
+      "name": "Gore Multispeciality Hospital",
+      "url": "https://gorehospital.com/",
+      "logo": "https://gorehospital.com/assets/logo.jpeg",
+      "image": "https://gorehospital.com/assets/group.png",
+      "telephone": "+91 96895 28414",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sr. No. 13/1A, In front of Blooming International School, Sai Nagar, Mamurdi",
+        "addressLocality": "Pimpri-Chinchwad",
+        "addressRegion": "Maharashtra",
+        "postalCode": "412101",
+        "addressCountry": "IN"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gorehospital.com/our-doctors.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gorehospital.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Our Doctors", "item": "https://gorehospital.com/our-doctors.html" }
+      ]
+    },
+
+    {
+      "@type": "ItemList",
+      "@id": "https://gorehospital.com/our-doctors.html#doctors",
+      "name": "Doctors at Gore Multispeciality Hospital",
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+      "numberOfItems": 33,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@id": "https://gorehospital.com/#dr-dattesh-gore" } },
+        { "@type": "ListItem", "position": 2, "item": { "@id": "https://gorehospital.com/#dr-shubhangi-gaikwad" } },
+        { "@type": "ListItem", "position": 3, "item": { "@id": "https://gorehospital.com/#dr-vilas-mundkar" } },
+        { "@type": "ListItem", "position": 4, "item": { "@id": "https://gorehospital.com/#dr-sandesh-gawade" } },
+        { "@type": "ListItem", "position": 5, "item": { "@id": "https://gorehospital.com/#dr-vivek-kulkarni" } },
+        { "@type": "ListItem", "position": 6, "item": { "@id": "https://gorehospital.com/#dr-sanjay-ponde" } },
+        { "@type": "ListItem", "position": 7, "item": { "@id": "https://gorehospital.com/#dr-chaitanya-kadam" } },
+        { "@type": "ListItem", "position": 8, "item": { "@id": "https://gorehospital.com/#dr-sumita-saroj" } },
+        { "@type": "ListItem", "position": 9, "item": { "@id": "https://gorehospital.com/#dr-amol-thorat" } },
+        { "@type": "ListItem", "position": 10, "item": { "@id": "https://gorehospital.com/#dr-praveen-dharaskar" } },
+        { "@type": "ListItem", "position": 11, "item": { "@id": "https://gorehospital.com/#dr-nikhil-mohorkar" } },
+        { "@type": "ListItem", "position": 12, "item": { "@id": "https://gorehospital.com/#dr-ajay-dombale" } },
+        { "@type": "ListItem", "position": 13, "item": { "@id": "https://gorehospital.com/#dr-pravin-waghmare" } },
+        { "@type": "ListItem", "position": 14, "item": { "@id": "https://gorehospital.com/#dr-ashish-ubale" } },
+        { "@type": "ListItem", "position": 15, "item": { "@id": "https://gorehospital.com/#dr-gautam-jugal" } },
+        { "@type": "ListItem", "position": 16, "item": { "@id": "https://gorehospital.com/#dr-chandrakant-upadhyay" } },
+        { "@type": "ListItem", "position": 17, "item": { "@id": "https://gorehospital.com/#dr-priya-waghmare" } },
+        { "@type": "ListItem", "position": 18, "item": { "@id": "https://gorehospital.com/#dr-bhushan-patil" } },
+        { "@type": "ListItem", "position": 19, "item": { "@id": "https://gorehospital.com/#dr-sandeep-naphade" } },
+        { "@type": "ListItem", "position": 20, "item": { "@id": "https://gorehospital.com/#dr-amit-kumar-pandey" } },
+        { "@type": "ListItem", "position": 21, "item": { "@id": "https://gorehospital.com/#dr-paresh-babel" } },
+        { "@type": "ListItem", "position": 22, "item": { "@id": "https://gorehospital.com/#dr-amit-morey" } },
+        { "@type": "ListItem", "position": 23, "item": { "@id": "https://gorehospital.com/#dr-prathamesh-kulkarni" } },
+        { "@type": "ListItem", "position": 24, "item": { "@id": "https://gorehospital.com/#dr-pandit-pachore" } },
+        { "@type": "ListItem", "position": 25, "item": { "@id": "https://gorehospital.com/#dr-sandeep-bendale" } },
+        { "@type": "ListItem", "position": 26, "item": { "@id": "https://gorehospital.com/#dr-prafull-warghane" } },
+        { "@type": "ListItem", "position": 27, "item": { "@id": "https://gorehospital.com/#dr-vivek-bonde" } },
+        { "@type": "ListItem", "position": 28, "item": { "@id": "https://gorehospital.com/#dr-bhagirath-more" } },
+        { "@type": "ListItem", "position": 29, "item": { "@id": "https://gorehospital.com/#dr-rakesh-neve" } },
+        { "@type": "ListItem", "position": 30, "item": { "@id": "https://gorehospital.com/#dr-jaypal-reddy" } },
+        { "@type": "ListItem", "position": 31, "item": { "@id": "https://gorehospital.com/#dr-shankar-mundhe" } },
+        { "@type": "ListItem", "position": 32, "item": { "@id": "https://gorehospital.com/#dr-upendra-kudlikar" } },
+        { "@type": "ListItem", "position": 33, "item": { "@id": "https://gorehospital.com/#dr-sanika-gawade" } }
+      ]
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://gorehospital.com/#dr-dattesh-gore",
+      "name": "Dr. Dattesh Gore",
+      "jobTitle": "Doctor",
+      "hasOccupation": { "@type": "Occupation", "name": "Physician" },
+      "knowsAbout": ["Internal Medicine", "Critical Care", "Anaesthesiology", "Family Medicine"],
+      "worksFor": { "@id": "https://gorehospital.com/#hospital" },
+      "workLocation": {
+        "@type": "Place",
+        "name": "Gore Multispeciality Hospital",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sr. No. 13/1A, In front of Blooming International School, Sai Nagar, Mamurdi",
+          "addressLocality": "Pimpri-Chinchwad",
+          "addressRegion": "Maharashtra",
+          "postalCode": "412101",
+          "addressCountry": "IN"
+        }
+      },
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "MBBS, DA, MD" }
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://gorehospital.com/#dr-vivek-kulkarni",
+      "name": "Dr. Vivek Kulkarni",
+      "jobTitle": "Doctor",
+      "hasOccupation": { "@type": "Occupation", "name": "Surgeon" },
+      "knowsAbout": ["General Surgery", "Laparoscopic Surgery", "Bariatric Surgery"],
+      "worksFor": { "@id": "https://gorehospital.com/#hospital" },
+      "workLocation": {
+        "@type": "Place",
+        "name": "Gore Multispeciality Hospital",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sr. No. 13/1A, In front of Blooming International School, Sai Nagar, Mamurdi",
+          "addressLocality": "Pimpri-Chinchwad",
+          "addressRegion": "Maharashtra",
+          "postalCode": "412101",
+          "addressCountry": "IN"
+        }
+      },
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "MBBS, MS" }
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://gorehospital.com/#dr-sanjay-ponde",
+      "name": "Dr. Sanjay Ponde",
+      "jobTitle": "Doctor",
+      "hasOccupation": { "@type": "Occupation", "name": "Gynecologist" },
+      "knowsAbout": ["Obstetrics", "Gynecology"],
+      "worksFor": { "@id": "https://gorehospital.com/#hospital" },
+      "workLocation": {
+        "@type": "Place",
+        "name": "Gore Multispeciality Hospital",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sr. No. 13/1A, In front of Blooming International School, Sai Nagar, Mamurdi",
+          "addressLocality": "Pimpri-Chinchwad",
+          "addressRegion": "Maharashtra",
+          "postalCode": "412101",
+          "addressCountry": "IN"
+        }
+      },
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "MBBS, DGO, DNB, MS/MD" }
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://gorehospital.com/#dr-chaitanya-kadam",
+      "name": "Dr. Chaitanya Kadam",
+      "jobTitle": "Doctor",
+      "hasOccupation": { "@type": "Occupation", "name": "Gynecologist" },
+      "knowsAbout": ["Obstetrics", "Gynecology"],
+      "worksFor": { "@id": "https://gorehospital.com/#hospital" },
+      "workLocation": {
+        "@type": "Place",
+        "name": "Gore Multispeciality Hospital",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sr. No. 13/1A, In front of Blooming International School, Sai Nagar, Mamurdi",
+          "addressLocality": "Pimpri-Chinchwad",
+          "addressRegion": "Maharashtra",
+          "postalCode": "412101",
+          "addressCountry": "IN"
+        }
+      },
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "MBBS, DGO, DNB" }
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://gorehospital.com/#dr-amol-thorat",
+      "name": "Dr. Amol Thorat",
+      "jobTitle": "Doctor",
+      "hasOccupation": { "@type": "Occupation", "name": "Pediatrician" },
+      "knowsAbout": ["Paediatrics", "Neonatology"],
+      "worksFor": { "@id": "https://gorehospital.com/#hospital" },
+      "workLocation": {
+        "@type": "Place",
+        "name": "Gore Multispeciality Hospital",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sr. No. 13/1A, In front of Blooming International School, Sai Nagar, Mamurdi",
+          "addressLocality": "Pimpri-Chinchwad",
+          "addressRegion": "Maharashtra",
+          "postalCode": "412101",
+          "addressCountry": "IN"
+        }
+      },
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "MBBS, DCH, DNB" }
+    }
+
+    /* NOTE:
+       Continue the same "Person" pattern for the remaining doctors.
+       This is what removes the Organization errors in Rich Results Test.
+    */
+  ]
+}
+</script>
+
+</head>
+
+<body>
+  <!-- ===== Header (standardized) ===== -->
+  <header class="header-one header--sticky">
+    <div class="header-top-area">
+      <div class="container-full-header">
+        <div class="col-lg-12">
+          <div class="header-top">
+            <div class="left">
+              <div class="map-area">
+                <i class="fa-sharp fa-regular fa-location-dot"></i>
+                <a href="https://maps.app.goo.gl/mQUofmKkM4vZiJsG9" target="_blank">Gore Multispeciality Hospital,
+                  Ravet, Pimpri Chinchwad
+                  PCMC </a>
+
+              </div>
+            </div>
+            <div class="social-media-icons">
+              <a href="https://www.facebook.com/gore.multispeciality.hospital" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="https://www.instagram.com/gore_multispeciality_hospital/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/gore-multispecialty-hospital/about/" target="_blank"
+                class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.youtube.com/@Goremultispecialityhospital" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+            <div class="right">
+              <div class="map-area">
+                <i class="fa-regular fa-phone"></i>
+                <a href="tel:+91 9689528414"> 24x7Emergency Line: +91 96895 28414</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-full-header">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-wrapper-1">
+            <div class="logo-area-start">
+              <a href="/index.html" class="logo">
+                <img width="100" src="assets/logo.jpeg" alt="lGore Hospital Logo">
+              </a>
+              <div class="nav-area">
+                <ul class="">
+                  <li class="main-nav">
+                    <a href="/index.html">Home</a>
+                  </li>
+
+                  <li class="main-nav mega-menu">
+                    <a href="/about-us.html">About</a>
+                  </li>
+
+                  <li class="main-nav has-dropdown mega-menu">
+                    <a href="#">Service</a>
+                    <div class="rts-mega-menu with-add">
+                      <div class="wrapper">
+                        <div class="row g-0">
+                          <div class="col-lg-9">
+                            <div class="menu-add-top-area">
+                              <h5 class="title">Our Treatments</h5>
+                            </div>
+                            <div class="row pl--30 pt--30">
+                              <!-- Col 1 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/cardiology.html">
+                                      <img src="assets/cardiology.png" alt="service" class="service-logo">Cardiology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pediatric.html">
+                                      <img src="assets/Paediatrics.png" alt="service"
+                                        class="service-logo">Paediatrics</a>
+                                  </li>
+                                  <!-- Neurology (not ready) -->
+                                  <li>
+                                    <a href="/services/neurology.html">
+                                      <img src="assets/psychiatry.png" alt="service" class="service-logo">Neurology</a>
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <!-- Col 2 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/orthopaedics.html">
+                                      <img src="assets/orthopaedics.png" alt="service"
+                                        class="service-logo">Orthopaedics</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/family-physician.html">
+                                      <img src="assets/family-physician.png" alt="service" class="service-logo">Family
+                                      Physician</a>
+                                  </li>
+
+                                  <li>
+                                    <a href="/services/gynaecology.html">
+                                      <img src="assets/gynecology.png" alt="service" class="service-logo">Gynecology</a>
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <!-- Col 3 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/endocrinology.html">
+                                      <img src="assets/Endocrinolog.png" alt="service"
+                                        class="service-logo">Endocrinology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/nephrology.html">
+                                      <img src="assets/nephrology.png" alt="service" class="service-logo">Nephrology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/gastrology.html">
+                                      <img src="assets/gastrology-treatment.png" alt="service"
+                                        class="service-logo">Gastrology</a>
+                                  </li>
+
+
+                                </ul>
+                              </div>
+                              <!-- Col 4 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/ent.html">
+                                      <img src="assets/ent-img.png" alt="service" class="service-logo">ENT</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pulmonology.html">
+                                      <img src="assets/Pulmonology.png" alt="service"
+                                        class="service-logo">Pulmonology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/cancer-care.html">
+                                      <img src="assets/cancer-care-treatment.png" alt="service"
+                                        class="service-logo">Cancer
+                                      Care</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/radiology.html">
+                                      <img src="assets/radiology.png" alt="service" class="service-logo">Radiology</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Right side -->
+                          <div class="col-lg-3">
+                            <div class="menu-right-add">
+                              <img src="assets/01_menu.webp" alt="gore-hospital-image" loading="lazy">
+                              <div class="absolute-image">
+                                <img src="assets/02_menu.webp" alt="gore-hospital-image" loading="lazy">
+                                <div class="inner-content">
+                                  <h3 class="title">
+                                    Trust Your Heart to <br>
+                                    The Experts
+                                  </h3>
+                                  <a href="/appointment.html" class="rts-btn btn-primary">Appointment</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /Right -->
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="main-nav">
+                    <a href="./our-doctors.html">Our Doctors</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="blog.html">Blog</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./gallery.html">Gallery</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./contact-us.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-right">
+              <!-- search removed per request -->
+              <a href="/appointment.html" class="rts-btn btn-primary">Appointment
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy"></a>
+              <div class="menu-btn" id="menu-btn">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect width="20" height="2" fill="#1F1F25"></rect>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ===== /Header ===== -->
+
+  <!-- ===== Hero ===== -->
+  <section class="doc-hero">
+    <div class="container-80">
+      <h1 class="title">Meet Our Expert Doctors</h1>
+      <p class="disc">
+        Experienced, compassionate, and multi-disciplinary care — right here
+        in Ravet (PCMC).
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Doctors Grid ===== -->
+  <main class="container-80">
+    <div class="doc-grid">
+      <!-- Cards (unchanged visually) -->
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="assets/gore.png" alt="Dr. Dattesh Gore" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Dattesh Gore</h3>
+          <p class="doc-spec">
+            Family Physician • Internal Medicine &amp; Critical Care •
+            Anaesthesia
+          </p>
+          <p class="doc-qual">
+            MBBS, DA, MD (Intensivist &amp; Anaesthesiologist)
+          </p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Shubhangi Gaikwad" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Shubhangi Gaikwad</h3>
+          <p class="doc-spec">Family Physician</p>
+          <p class="doc-qual">BHMS, PGDEMS</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Vilas Mundkar" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Vilas Mundkar</h3>
+          <p class="doc-spec">Internal Medicine &amp; Critical Care</p>
+          <p class="doc-qual">MBBS (General Medicine)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="assets/sandesh.jpg" alt="Dr. Sandesh Gawade" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Sandesh Gawade</h3>
+          <p class="doc-spec">
+            General Surgery • GI • Laparoscopic &amp; Endoscopic Surgery
+          </p>
+          <p class="doc-qual">MBBS, DNB (Laparoscopic &amp; GI Surgeon)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Vivek Kulkarni" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Vivek Kulkarni</h3>
+          <p class="doc-spec">
+            General Surgery • Laparoscopic &amp; Bariatric Surgery
+          </p>
+          <p class="doc-qual">
+            MBBS, MS (Laparoscopic &amp; Bariatric Surgeon)
+          </p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Sanjay Ponde" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Sanjay Ponde</h3>
+          <p class="doc-spec">Obstetrics &amp; Gynaecology</p>
+          <p class="doc-qual">
+            MBBS, DGO, DNB, MS/MD (Obstetrician &amp; Gynaecologist)
+          </p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Chaitanya Kadam" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Chaitanya Kadam</h3>
+          <p class="doc-spec">Obstetrics &amp; Gynaecology</p>
+          <p class="doc-qual">MBBS, DGO, DNB</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="assets/sumita.jpg" alt="Dr. Sumita Saroj" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Sumita Saroj</h3>
+          <p class="doc-spec">Obstetrics &amp; Gynaecology</p>
+          <p class="doc-qual">MS/MD (Obstetrician &amp; Gynaecologist)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="assets/amolthorat.jpg" alt="Dr. Amol Thorat" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Amol Thorat</h3>
+          <p class="doc-spec">Paediatrics • Neonatology</p>
+          <p class="doc-qual">
+            MBBS, DCH, DNB (Paediatrician &amp; Neonatologist)
+          </p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Praveen Dharaskar" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Praveen Dharaskar</h3>
+          <p class="doc-spec">Paediatrics • Neonatology</p>
+          <p class="doc-qual">MBBS, MD (Paediatrician &amp; Neonatologist)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Nikhil Mohorkar" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Nikhil Mohorkar</h3>
+          <p class="doc-spec">Orthopaedics &amp; Trauma Care</p>
+          <p class="doc-qual">MBBS, D.Ortho</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Ajay Dombale" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Ajay Dombale</h3>
+          <p class="doc-spec">Orthopaedics</p>
+          <p class="doc-qual">MBBS, DNB (Orthopaedics)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Pravin Waghmare" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Pravin Waghmare</h3>
+          <p class="doc-spec">Orthopaedics</p>
+          <p class="doc-qual">MBBS (Orthopaedics)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Ashish Ubale" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Ashish Ubale</h3>
+          <p class="doc-spec">Psychiatry</p>
+          <p class="doc-qual">MBBS, MD (Psychiatry)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Gautam Jugal" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Gautam Jugal</h3>
+          <p class="doc-spec">Cardiology</p>
+          <p class="doc-qual">MBBS, MD, DM (Cardiologist)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Chandrakant Upadhyay" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Chandrakant Upadhyay</h3>
+          <p class="doc-spec">Cardiology (Interventional)</p>
+          <p class="doc-qual">MBBS, MD, DM (Interventional Cardiologist)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Priya Waghmare" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Priya Waghmare</h3>
+          <p class="doc-spec">Cardiology</p>
+          <p class="doc-qual">MBBS</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Bhushan Patil" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Bhushan Patil</h3>
+          <p class="doc-spec">Plastic &amp; Cosmetic Surgery</p>
+          <p class="doc-qual">MBBS, MS, MCh (Plastic Surgery)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Sandeep Naphade" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Sandeep Naphade</h3>
+          <p class="doc-spec">Plastic &amp; Cosmetic Surgery</p>
+          <p class="doc-qual">MBBS, MS, MCh (Plastic Surgery)</p>
+        </div>
+      </article>
+
+   <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Amit Kumar Pandey" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Amit Kumar Pandey</h3>
+          <p class="doc-spec">Neurology</p>
+          <p class="doc-qual">MBBS, MD, DM (Neurologist)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Paresh Babel" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Paresh Babel</h3>
+          <p class="doc-spec">Neurology</p>
+          <p class="doc-qual">MBBS, MD, DM (Neurologist)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Amit Morey" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Amit Morey</h3>
+          <p class="doc-spec">ENT</p>
+          <p class="doc-qual">MBBS, MS (ENT)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Prathamesh Kulkarni" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Prathamesh Kulkarni</h3>
+          <p class="doc-spec">ENT</p>
+          <p class="doc-qual">MBBS, MS (ENT)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Pandit Pachore" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Pandit Pachore</h3>
+          <p class="doc-spec">Radiology</p>
+          <p class="doc-qual">MBBS, DMRD, DNB</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Sandeep Bendale" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Sandeep Bendale</h3>
+          <p class="doc-spec">Radiology</p>
+          <p class="doc-qual">MBBS, MD (Radiology)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Prafull Warghane" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Prafull Warghane</h3>
+          <p class="doc-spec">Pulmonology &amp; Chest Medicine</p>
+          <p class="doc-qual">MBBS, MD (Chest Physician)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Vivek Bonde" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Vivek Bonde</h3>
+          <p class="doc-spec">Neurosurgery</p>
+          <p class="doc-qual">MBBS, MS, MCh (Neurosurgeon)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Bhagirath More" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Bhagirath More</h3>
+          <p class="doc-spec">Neurosurgery</p>
+          <p class="doc-qual">MBBS, MS, MCh (Neurosurgeon)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Rakesh Neve" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Rakesh Neve</h3>
+          <p class="doc-spec">Oncosurgery</p>
+          <p class="doc-qual">MBBS, MS, MCh (Oncosurgeon)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Jaypal Reddy" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Jaypal Reddy</h3>
+          <p class="doc-spec">Oncosurgery</p>
+          <p class="doc-qual">MBBS, MS, MCh (Oncosurgeon)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Shankar Mundhe" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Shankar Mundhe</h3>
+          <p class="doc-spec">Urology</p>
+          <p class="doc-qual">MBBS, MS, MCh (Urosurgeon)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="#" alt="Dr. Upendra Kudlikar" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Upendra Kudlikar</h3>
+          <p class="doc-spec">Urology</p>
+          <p class="doc-qual">MBBS, MS, MCh (Urosurgeon)</p>
+        </div>
+      </article>
+
+      <article class="doc-card doctor-card-io">
+        <div class="doc-photo">
+          <img src="assets/sanika.jpg" alt="Dr. Sanika Gawade" loading="lazy">
+        </div>
+        <div class="doc-body">
+          <h3 class="doc-name">Dr. Sanika Gawade</h3>
+          <p class="doc-spec">Dental Surgery</p>
+          <p class="doc-qual">BDS (Dental Surgeon)</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- ===== Footer (subscribe removed) ===== -->
+  <div id="footer-placeholder"></div>
+  <div id="side-bar" class="side-bar header-two">
+    <button class="close-icon-menu"><i class="far fa-times"></i></button>
+    <div class="mobile-menu-main">
+      <nav class="nav-main mainmenu-nav mt--30">
+        <ul class="mainmenu metismenu" id="mobile-menu-active">
+          <li><a href="/index.html" class="main">Home</a></li>
+          <li><a href="/about-us.html" class="main">About</a></li>
+
+          <li class="has-droupdown">
+            <a href="#" class="main">Service</a>
+            <ul class="submenu mm-collapse">
+              <li class="has-droupdown">
+                <a href="#" class="main">Cardiac & Child Care</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/cardiology.html"><img src="assets/09.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Cardiology</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/pediatric.html"><img src="assets/11.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Paediatrics</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="/services/neurology.html"><img src="assets/10.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Neurology</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="/services/gynaecology.html"><img src="assets/12.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Obstetrics</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/ent.html"><img src="assets/12.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      ENT</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-droupdown">
+                <a href="#" class="main">Medicine & Skin</a>
+                <ul class="submenu mm-collapse">
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="/services/orthopaedics.html"><img src="assets/14.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Orthopaedics</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="/services/neurology.html"><img src="assets/13.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Neurology</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="#"><img src="assets/15.svg" alt="gore-hospital-image" loading="lazy">
+                      Dermatology</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="/services/gynaecology.html"><img src="assets/16.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Gynecology</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-droupdown">
+                <a href="#" class="main">Advanced Care</a>
+                <ul class="submenu mm-collapse">
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="/services/endocrinology.html"><img src="assets/24.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Endocrinology</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/nephrology.html"><img src="assets/25.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Nephrology</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/gastrology.html"><img src="assets/gastrology-menu.png"
+                        alt="gore-hospital-image" loading="lazy">
+                      Gastrology</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="/services/cancer-care.html"><img src="assets/26.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Cancer Care</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="/services/radiology.html"><img src="assets/27.svg"
+                        alt="gore-hospital-image" loading="lazy">
+                      Radiology</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-droupdown">
+                <a href="#" class="main">Critical & Rehab</a>
+                <ul class="submenu mm-collapse">
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="#"><img src="assets/10.svg" alt="gore-hospital-image" loading="lazy">
+                      Emergency Services</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="#"><img src="assets/10.svg" alt="gore-hospital-image" loading="lazy">
+                      Intensive Care Unit</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="#"><img src="assets/10.svg" alt="gore-hospital-image" loading="lazy">
+                      Critical Care</a>
+                  </li>
+                  <li class="is-disabled">
+                    <a class="mobile-menu-link" href="#"><img src="assets/10.svg" alt="gore-hospital-image" loading="lazy">
+                      Rehabilitation &amp; Physiotherapy</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/pulmonology.html"><img src="assets/pilomonology.webp"
+                        alt="gore-hospital-image" loading="lazy">
+                      Pulmonology</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/blog.html" class="main">Blog</a></li>
+          <li><a href="/our-doctors.html">Our Doctors</a></li>
+          <li><a href="/gallery.html">Gallery</a>li></li>
+          <li><a href="/contact-us.html" class="main">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== Scripts ===== -->
+  <script src="assets/js/plugins/jquery.js"></script>
+  <script src="assets/js/plugins/jquery-ui.js"></script>
+  <script src="assets/js/vendor/waw.js"></script>
+  <script src="assets/js/plugins/swiper.js"></script>
+  <script src="assets/js/plugins/metismenu.js"></script>
+  <script src="assets/js/plugins/jarallax.js"></script>
+  <script src="assets/js/plugins/smooth-scroll.js"></script>
+  <script src="assets/js/plugins/magnifying-popup.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- GSAP for Iron Shine Effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- IntersectionObserver reveal -->
+  <script>
+    (function () {
+      const cards = [...document.querySelectorAll(".doctor-card-io")];
+      const inView = (el) => {
+        const r = el.getBoundingClientRect(),
+          vh = innerHeight || document.documentElement.clientHeight;
+        return r.top < vh && r.bottom > 0;
+      };
+      if (!cards.length) return;
+      cards.forEach((c) => (c.style.visibility = "visible"));
+      if (!("IntersectionObserver" in window)) {
+        return;
+      }
+      cards.forEach((c) => {
+        if (!inView(c)) c.classList.add("is-hidden");
+        else c.classList.add("is-visible");
+      });
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              const el = e.target;
+              const idx = cards.indexOf(el);
+              el.style.transitionDelay = (idx % 6) * 60 + "ms";
+              el.classList.add("is-visible");
+              el.classList.remove("is-hidden");
+              io.unobserve(el);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -5% 0px" }
+      );
+      cards.forEach((c) => {
+        if (c.classList.contains("is-hidden")) io.observe(c);
+      });
+      setTimeout(() => {
+        if (!cards.some((c) => c.classList.contains("is-visible")))
+          cards.forEach((c) => c.classList.add("is-visible"));
+      }, 1000);
+    })();
+
+    // Auto-detect missing images and insert Professional Placeholder
+    (function () {
+      // Simple SVG Doctor Icon
+      const placeholderSVG = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235b5b63'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E`;
+
+      const genericImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
+      const grid = document.querySelector(".doc-grid");
+      const cards = Array.from(document.querySelectorAll(".doc-card"));
+
+      const cardsWithImages = [];
+      const cardsWithoutImages = [];
+
+      cards.forEach((card) => {
+        const img = card.querySelector(".doc-photo img");
+        const imgSrc = img ? img.getAttribute("src") : "";
+        const filename = imgSrc ? imgSrc.split("/").pop() : "";
+
+        // Condition for missing/placeholder image
+        const isMissing = !imgSrc || imgSrc === "#" || imgSrc.trim() === "" || genericImages.includes(filename);
+
+        if (isMissing) {
+          card.classList.add("no-image");
+
+          // Keep current text, just replace Image Source with Placeholder
+          if (img) {
+            img.src = placeholderSVG;
+            img.alt = "Doctor Placeholder";
+          } else {
+            // If img tag missing completely (rare), add it
+            const newImg = document.createElement("img");
+            newImg.src = placeholderSVG;
+            const photoDiv = card.querySelector(".doc-photo");
+            if (photoDiv) photoDiv.appendChild(newImg);
+          }
+
+          cardsWithoutImages.push(card);
+        } else {
+          cardsWithImages.push(card);
+        }
+      });
+
+      // Clear the grid and re-append in order: Images first -> Placeholders last
+      grid.innerHTML = "";
+      cardsWithImages.forEach((card) => grid.appendChild(card));
+      cardsWithoutImages.forEach((card) => grid.appendChild(card));
+
+    })();
+  </script>
+  <script src="https://assets.taskade.com/embeds/latest/taskade-embed.min.js"></script>
+  <script type="module">
+    TaskadeEmbed.AgentPublicChatPopup.init({
+      publicAgentId: "01K7KBX8K63VVH2RR5VFFXVX9D",
+    });
+  </script>
+  <script src="assets/js/footer.js"></script>
+</body>
+
+</html>

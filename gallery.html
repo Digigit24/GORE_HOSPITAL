@@ -1,0 +1,1489 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logo.jpeg">
+  <title>Gallery | Gore Multispeciality Hospital</title>
+  <meta name="description"
+    content="Explore our hospital gallery featuring modern facilities, advanced equipment, patient rooms and emergency care areas in Ravet, Pimpri Chinchwad.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gorehospital.com/">
+  <meta property="og:title" content="Gallery | Gore Multispeciality Hospital">
+  <meta property="og:description"
+    content="Explore our hospital gallery featuring modern facilities, advanced equipment, patient rooms and emergency care areas in Ravet, Pimpri Chinchwad.">
+  <meta property="og:image"
+    content="https://gorehospital.com/images/gallery-gore-multispeciality-hospital-ravet-pimpri-chinchwad-pune.png">
+
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:url" content="https://gorehospital.com/">
+  <meta name="twitter:title" content="Gallery | Gore Multispeciality Hospital">
+  <meta name="twitter:description"
+    content="Explore our hospital gallery featuring modern facilities, advanced equipment, patient rooms and emergency care areas in Ravet, Pimpri Chinchwad.">
+  <meta name="twitter:image"
+    content="https://gorehospital.com/images/gallery-gore-multispeciality-hospital-ravet-pimpri-chinchwad-pune.png">
+
+  <meta name="google-site-verification" content="dLZg1y3EKmULqa1WODeAoMWPpKHYPyCSZ_bHDZ_-xEI" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://gorehospital.com/gallery.html">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/plugins/plugins.css">
+  <link rel="stylesheet" href="/assets/css/plugins/magnifying-popup.css">
+  <style>
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(180deg, #fff 0%, var(--bg-soft) 100%);
+      padding: clamp(40px, 8vw, 80px) 24px clamp(30px, 6vw, 60px);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--ink) 0%, var(--brand) 100%);
+      -webkit-background-clip: text;
+      /* -webkit-text-fill-color: transparent; */
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--muted);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ===== HORIZONTAL SCROLL ===== */
+    .scroll-section-wrapper {
+      overflow: hidden;
+    }
+
+    .scroll-section {
+      width: 100%;
+    }
+
+    .scroll-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: clamp(40px, 6vw, 80px) 24px;
+    }
+
+    .section-header {
+      margin-bottom: clamp(32px, 5vw, 48px);
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--brand);
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    .section-desc {
+      font-size: clamp(15px, 2.2vw, 18px);
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .cards-container {
+      display: flex;
+      gap: 40px;
+      width: fit-content;
+      will-change: transform;
+    }
+
+    .facility-card {
+      width: 600px;
+      flex-shrink: 0;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .facility-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card-image {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .facility-card:hover .card-image img {
+      transform: scale(1.08);
+    }
+
+    .card-badges {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .badge {
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-content {
+      padding: 24px;
+    }
+
+    .card-content h3 {
+      font-size: clamp(18px, 2.8vw, 24px);
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .card-content p {
+      color: var(--muted);
+      font-size: clamp(14px, 2vw, 16px);
+      line-height: 1.6;
+    }
+
+    .progress-bar {
+      margin-top: 32px;
+      height: 4px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg,
+          var(--brand) 0%,
+          var(--brand-light) 100%);
+      transition: width 0.1s linear;
+    }
+
+    .thumbnails {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 32px;
+      max-width: 600px;
+    }
+
+    .thumb {
+      aspect-ratio: 4/3;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 3px solid transparent;
+      transition: all 0.3s;
+      opacity: 0.6;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumb.active {
+      border-color: var(--brand);
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .thumb:hover {
+      opacity: 1;
+    }
+
+    /* ===== GALLERY GRID (unchanged) ===== */
+    .gallery-grid {
+      background: linear-gradient(180deg, var(--bg-soft) 0%, #ffffff 100%);
+      padding: clamp(50px, 7vw, 90px) 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-grid::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle,
+          rgba(37, 99, 235, 0.06) 0%,
+          transparent 70%);
+      pointer-events: none;
+    }
+
+    .grid-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .grid-header {
+      text-align: center;
+      margin-bottom: clamp(32px, 5vw, 48px);
+    }
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 8px;
+      grid-auto-rows: 160px;
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: var(--shadow-lg);
+      z-index: 10;
+    }
+
+    .gallery-card.xlarge {
+      grid-column: span 8;
+      grid-row: span 3;
+    }
+
+    .gallery-card.large {
+      grid-column: span 6;
+      grid-row: span 2;
+    }
+
+    .gallery-card.medium {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+
+    .gallery-card.small {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+
+    .gallery-card.tall {
+      grid-column: span 4;
+      grid-row: span 3;
+    }
+
+    .gallery-card.wide {
+      grid-column: span 6;
+      grid-row: span 1;
+    }
+
+    .card-img-wrapper {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .card-img-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+          transparent 0%,
+          rgba(15, 23, 42, 0.7) 100%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      z-index: 1;
+    }
+
+    .gallery-card:hover .card-img-wrapper::before {
+      opacity: 1;
+    }
+
+    .card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gallery-card:hover .card-img-wrapper img {
+      transform: scale(1.1);
+    }
+
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      z-index: 2;
+      background: linear-gradient(180deg,
+          transparent 0%,
+          rgba(15, 23, 42, 0) 40%,
+          rgba(15, 23, 42, 0.85) 100%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .gallery-card:hover .card-overlay {
+      opacity: 1;
+    }
+
+    .card-icon {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      z-index: 3;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+    }
+
+    .gallery-card:hover .card-icon {
+      transform: scale(1.08) rotate(5deg);
+      background: var(--brand);
+    }
+
+    .card-icon svg {
+      width: 20px;
+      height: 20px;
+      transition: all 0.3s;
+    }
+
+    .gallery-card:hover .card-icon svg {
+      stroke: white;
+    }
+
+    .card-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--brand) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      z-index: 2;
+    }
+
+    .gallery-card:hover .card-accent {
+      opacity: 0.15;
+    }
+
+    .gallery-card {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .gallery-card:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .gallery-card:nth-child(2) {
+      animation-delay: 0.08s;
+    }
+
+    .gallery-card:nth-child(3) {
+      animation-delay: 0.11s;
+    }
+
+    .gallery-card:nth-child(4) {
+      animation-delay: 0.14s;
+    }
+
+    .gallery-card:nth-child(5) {
+      animation-delay: 0.17s;
+    }
+
+    .gallery-card:nth-child(6) {
+      animation-delay: 0.2s;
+    }
+
+    .gallery-card:nth-child(7) {
+      animation-delay: 0.23s;
+    }
+
+    .gallery-card:nth-child(8) {
+      animation-delay: 0.26s;
+    }
+
+    .gallery-card:nth-child(9) {
+      animation-delay: 0.29s;
+    }
+
+    .gallery-card:nth-child(10) {
+      animation-delay: 0.32s;
+    }
+
+    .gallery-card:nth-child(11) {
+      animation-delay: 0.35s;
+    }
+
+    .gallery-card:nth-child(12) {
+      animation-delay: 0.38s;
+    }
+
+    .gallery-card:nth-child(13) {
+      animation-delay: 0.41s;
+    }
+
+    .gallery-card:nth-child(14) {
+      animation-delay: 0.44s;
+    }
+
+    .gallery-card:nth-child(15) {
+      animation-delay: 0.47s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(12px);
+      padding: 40px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 16px;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+      animation: zoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: white;
+      border: none;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s;
+    }
+
+    .lightbox-close:hover {
+      background: #f1f5f9;
+      transform: rotate(90deg);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1200px) {
+      .creative-grid {
+        grid-auto-rows: 140px;
+        gap: 7px;
+      }
+
+      .facility-card {
+        width: 500px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .nav-area {
+        display: none;
+      }
+
+      .menu-btn {
+        display: inline-flex;
+      }
+
+      /* show hamburger */
+      .facility-card {
+        width: 85vw;
+      }
+
+      .thumbnails {
+        display: none;
+      }
+
+      .creative-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6px;
+        grid-auto-rows: 120px;
+      }
+
+      .gallery-card.xlarge,
+      .gallery-card.large {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+
+      .gallery-card.medium {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+
+      .gallery-card.small,
+      .gallery-card.wide {
+        grid-column: span 3;
+        grid-row: span 1;
+      }
+
+      .gallery-card.tall {
+        grid-column: span 6;
+        grid-row: span 3;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container-full-header {
+        padding: 8px 12px;
+      }
+
+      .logo img {
+        width: 80px;
+      }
+
+      .hero {
+        padding: 32px 16px 24px;
+      }
+
+      .scroll-container {
+        padding: 32px 16px;
+      }
+
+      .facility-card {
+        width: 90vw;
+      }
+
+      .gallery-grid {
+        padding: 40px 10px;
+      }
+
+      .creative-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        grid-auto-rows: 110px;
+      }
+
+      .gallery-card.xlarge,
+      .gallery-card.large,
+      .gallery-card.medium,
+      .gallery-card.tall {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .gallery-card.small,
+      .gallery-card.wide {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .card-icon {
+        width: 36px;
+        height: 36px;
+        top: 10px;
+        right: 10px;
+      }
+
+      .card-icon svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .card-overlay {
+        padding: 12px;
+      }
+    }
+
+    .social-icon {
+      color: white;
+      /* White color for the icons */
+      font-size: 15px;
+      /* Icon size */
+      text-decoration: none;
+      /* Remove underline */
+      margin-left: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #fefefe;
+      /* Change color on hover */
+      transform: scale(1.2);
+      /* Slightly increase the size of the icon */
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW2B3PV89M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HW2B3PV89M');
+  </script>
+  <!-- Google Search -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["CollectionPage", "WebPage"],
+      "@id": "https://gorehospital.com/gallery.html#webpage",
+      "url": "https://gorehospital.com/gallery.html",
+      "name": "Gallery - Gore Multispeciality Hospital",
+      "isPartOf": { "@id": "https://gorehospital.com/#website" },
+      "about": { "@id": "https://gorehospital.com/#hospital" },
+      "mainEntity": { "@id": "https://gorehospital.com/gallery.html#gallery" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": "https://gorehospital.com/gallery.html#primaryimage",
+        "url": "https://gorehospital.com/assets/group.png"
+      },
+      "inLanguage": "en-IN"
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://gorehospital.com/#website",
+      "url": "https://gorehospital.com/",
+      "name": "Gore Multispeciality Hospital",
+      "publisher": { "@id": "https://gorehospital.com/#hospital" }
+    },
+
+    {
+      "@type": ["Hospital", "MedicalOrganization"],
+      "@id": "https://gorehospital.com/#hospital",
+      "name": "Gore Multispeciality Hospital",
+      "url": "https://gorehospital.com/",
+      "logo": "https://gorehospital.com/assets/logo.jpeg",
+      "image": "https://gorehospital.com/assets/group.png",
+      "telephone": "+91 96895 28414",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sr. No. 13/1A, In front of Blooming International School, Sai Nagar, Mamurdi",
+        "addressLocality": "Pimpri-Chinchwad",
+        "addressRegion": "Maharashtra",
+        "postalCode": "412101",
+        "addressCountry": "IN"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gorehospital.com/gallery.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gorehospital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Gallery",
+          "item": "https://gorehospital.com/gallery.html"
+        }
+      ]
+    },
+
+    {
+      "@type": ["ImageGallery", "MediaGallery"],
+      "@id": "https://gorehospital.com/gallery.html#gallery",
+      "name": "Gore Multispeciality Hospital Photo Gallery",
+      "description": "Photos of hospital infrastructure, departments, facilities, and patient care areas at Gore Multispeciality Hospital, Mamurdi (PCMC).",
+      "url": "https://gorehospital.com/gallery.html",
+      "about": { "@id": "https://gorehospital.com/#hospital" },
+      "publisher": { "@id": "https://gorehospital.com/#hospital" },
+      "inLanguage": "en-IN"
+    }
+  ]
+}
+</script>
+
+
+  <meta name="google-site-verification" content="YaL9bjJrrw4NMWo8kMtrYa26zhWuCjb8xqnf5YWTL84">
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header-one header--sticky">
+    <div class="header-top-area">
+      <div class="container-full-header">
+        <div class="col-lg-12">
+          <div class="header-top">
+            <div class="left">
+              <div class="map-area">
+                <i class="fa-sharp fa-regular fa-location-dot"></i>
+                <a href="https://share.google/1o4ABacpA4B04frhC">Gore Multispeciality Hospital, Ravet, Pimpri Chinchwad
+                  PCMC</a>
+              </div>
+            </div>
+            <div class="social-media-icons">
+              <a href="https://www.facebook.com/gore.multispeciality.hospital" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="https://www.instagram.com/gore_multispeciality_hospital/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/gore-multispecialty-hospital/about/" target="_blank"
+                class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.youtube.com/@Goremultispecialityhospital" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+            <div class="right">
+              <div class="map-area">
+                <i class="fa-regular fa-phone"></i>
+                <a href="tel:+91 9689528414">24x7Emergency Line: +91 96895 28414</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-full-header">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-wrapper-1">
+            <div class="logo-area-start">
+              <a href="/index.html" class="logo">
+                <img width="100" src="assets/logo.jpeg" alt="lGore Hospital Logo">
+              </a>
+              <div class="nav-area">
+                <ul class="">
+                  <li class="main-nav">
+                    <a href="/index.html">Home</a>
+                  </li>
+
+                  <li class="main-nav mega-menu">
+                    <a href="/about-us.html">About</a>
+                  </li>
+
+                  <li class="main-nav has-dropdown mega-menu">
+                    <a href="#">Service</a>
+                    <div class="rts-mega-menu with-add">
+                      <div class="wrapper">
+                        <div class="row g-0">
+                          <div class="col-lg-9">
+                            <div class="menu-add-top-area">
+                              <h5 class="title">Our Treatments</h5>
+                            </div>
+                            <div class="row pl--30 pt--30">
+                              <!-- Col 1 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/cardiology.html">
+                                      <img src="assets/cardiology.png" alt="service" class="service-logo">Cardiology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pediatric.html">
+                                      <img src="assets/Paediatrics.png" alt="service"
+                                        class="service-logo">Paediatrics</a>
+                                  </li>
+                                  <!-- Neurology (not ready) -->
+                                  <li>
+                                    <a href="/services/neurology.html">
+                                      <img src="assets/nephrology.png" alt="service" class="service-logo">Neurology</a>
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <!-- Col 2 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/orthopaedics.html">
+                                      <img src="assets/orthopaedics.png" alt="service"
+                                        class="service-logo">Orthopaedics</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/family-physician.html">
+                                      <img src="assets/family-physician.png" alt="service" class="service-logo">Family
+                                      Physician</a>
+                                  </li>
+
+                                  <li>
+                                    <a href="/services/gynaecology.html">
+                                      <img src="assets/gynecology.png" alt="service" class="service-logo">Gynecology</a>
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <!-- Col 3 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/endocrinology.html">
+                                      <img src="assets/Endocrinolog.png" alt="service"
+                                        class="service-logo">Endocrinology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/nephrology.html">
+                                      <img src="assets/nephrology.png" alt="service" class="service-logo">Nephrology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/gastrology.html">
+                                      <img src="assets/gastrology-treatment.png" alt="service"
+                                        class="service-logo">Gastrology</a>
+                                  </li>
+
+
+                                </ul>
+                              </div>
+                              <!-- Col 4 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/ent.html">
+                                      <img src="assets/ent-img.png" alt="service" class="service-logo">ENT</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pulmonology.html">
+                                      <img src="assets/Pulmonology.png" alt="service"
+                                        class="service-logo">Pulmonology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/cancer-care.html">
+                                      <img src="assets/cancer-care-treatment.png" alt="service"
+                                        class="service-logo">Cancer
+                                      Care</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/radiology.html">
+                                      <img src="assets/radiology.png" alt="service" class="service-logo">Radiology</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Right side -->
+                          <div class="col-lg-3">
+                            <div class="menu-right-add">
+                              <img src="assets/01_menu.webp" alt="gore-hospital-image" loading="lazy">
+                              <div class="absolute-image">
+                                <img src="assets/02_menu.webp" alt="gore-hospital-image" loading="lazy">
+                                <div class="inner-content">
+                                  <h3 class="title">
+                                    Trust Your Heart to <br>
+                                    The Experts
+                                  </h3>
+                                  <a href="/appointment.html" class="rts-btn btn-primary">Appointment</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /Right -->
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="main-nav">
+                    <a href="./our-doctors.html">Our Doctors</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./blog.html">Blog</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./gallery.html">Gallery</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./contact-us.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-right">
+              <!-- search removed per request -->
+              <a href="/appointment.html" class="rts-btn btn-primary">Appointment
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy"></a>
+              <div class="menu-btn" id="menu-btn">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect width="20" height="2" fill="#1F1F25"></rect>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Backdrop for mobile -->
+  <div class="cg-backdrop" id="cgBackdrop"></div>
+
+  <!-- Mobile side bar (hamburger menu) -->
+  <div id="side-bar" class="side-bar header-two">
+    <button class="close-icon-menu"><i class="far fa-times"></i></button>
+    <div class="mobile-menu-main">
+      <nav class="nav-main mainmenu-nav mt--30">
+        <ul class="mainmenu metismenu" id="mobile-menu-active">
+          <li><a href="/index.html" class="main">Home</a></li>
+          <li><a href="/about-us.html" class="main">About</a></li>
+
+          <li class="has-dropdown">
+            <a href="#" class="main">Service</a>
+            <ul class="submenu mm-collapse">
+              <li class="has-dropdown">
+                <a href="#" class="main">Cardiac & Child Care</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/cardiology.html"><img src="assets/cardiology.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Cardiology</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/pediatric.html"><img src="assets/Paediatrics.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Paediatrics</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/neurology.html"><img src="assets/psychiatry.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Neurology</a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <a href="#" class="main">Medicine & Skin</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/orthopaedics.html"><img src="assets/orthopaedics.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Orthopaedics</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/family-physician.html"><img
+                        src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Family Physician</a>
+                  </li>
+
+                  <li>
+                    <a class="mobile-menu-link" href="/services/gynaecology.html"><img src="assets/gynecology.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Gynecology</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <a href="#" class="main">Advanced Care</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/endocrinology.html"><img src="assets/Endocrinolog.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Endocrinology</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/nephrology.html"><img src="assets/nephrology.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Nephrology</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/cancer-care.html"><img
+                        src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Cancer Care</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/radiology.html"><img src="assets/radiology.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Radiology</a>
+                  </li>
+                </ul>
+              </li>
+
+
+            </ul>
+          </li>
+          <li><a href="/blog.html" class="main">Blog</a></li>
+          <li><a href="/gallery.html" class="main">Gallery</a></li>
+          <li><a href="/contact-us.html" class="main">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Our Gallery</h1>
+    <p>
+      Experience world-class healthcare facilities with the cleanest
+      standards, semi-private rooms, in-house pharmacy, and cutting-edge
+      medical technology.
+    </p>
+  </section>
+
+  <!-- HORIZONTAL SCROLL SECTION -->
+  <div class="scroll-section-wrapper">
+    <section class="scroll-section" id="scrollSection">
+      <div class="scroll-container">
+        <div class="section-header">
+          <span class="section-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+            </svg>
+            World-Class Care
+          </span>
+          <h2 class="section-title">Explore Our Facilities</h2>
+          <p class="section-desc">
+            Scroll to see our state-of-the-art medical facilities
+            horizontally.
+          </p>
+        </div>
+
+        <div class="cards-container" id="cardsContainer">
+          <article class="facility-card">
+            <div class="card-image">
+              <img src="assets/treatment-room.jpg" alt="Hospital Corridor"
+                onerror="this.src='https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800'" loading="lazy">
+              <div class="card-badges">
+                <span class="badge">HEPA Filtered</span><span class="badge">24/7 Cleaning</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Cleanest Hospital Standards</h3>
+              <p>
+                Our infection-safe protocols include continuous HEPA
+                filtration and daily deep cleaning rounds to ensure the safest
+                environment for patients and staff.
+              </p>
+            </div>
+          </article>
+
+          <article class="facility-card">
+            <div class="card-image">
+              <img src="assets/treatment-cots.jpg" alt="Patient Room"
+                onerror="this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800'" loading="lazy">
+              <div class="card-badges">
+                <span class="badge">Privacy</span><span class="badge">Comfort</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Semi-Private Rooms</h3>
+              <p>
+                Spacious, light-filled rooms designed for patient comfort with
+                24x7nursing care, modern amenities, and a peaceful healing
+                environment.
+              </p>
+            </div>
+          </article>
+
+          <article class="facility-card">
+            <div class="card-image">
+              <img src="assets/pharmacy-store.jpg" alt="Pharmacy"
+                onerror="this.src='https://images.unsplash.com/photo-1576602976047-174e57a47881?w=800'" loading="lazy">
+              <div class="card-badges">
+                <span class="badge">Genuine Meds</span><span class="badge">E-Billing</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>In-House Pharmacy</h3>
+              <p>
+                Access medications immediately with our fully-stocked pharmacy
+                featuring genuine medicines, digital prescriptions, and fast
+                service for patient convenience.
+              </p>
+            </div>
+          </article>
+
+          <article class="facility-card">
+            <div class="card-image">
+              <img src="#" alt="Medical Equipment"
+                onerror='this.src="https://images.unsplash.com/photo-1583911860205-72f8ac8ddcbe?w=800"' loading="lazy">
+              <div class="card-badges">
+                <span class="badge">AI-Powered</span><span class="badge">Precision</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Advanced Medical Technology</h3>
+              <p>
+                State-of-the-art diagnostic and monitoring equipment ensures
+                accurate diagnoses and precise treatment for better patient
+                outcomes.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="thumbnails" id="thumbnails"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GALLERY GRID -->
+  <section class="gallery-grid">
+    <div class="grid-container">
+      <div class="grid-header">
+        <h2 class="section-title">More From Our Hospital</h2>
+        <p class="section-desc">
+          Discover our comprehensive facilities designed for your complete
+          care and comfort
+        </p>
+      </div>
+
+      <div class="creative-grid" id="creativeGrid"></div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">X</button>
+    <img class="lightbox-img" id="lightboxImg" src="/assets/gore-hospital-beds.jpg" alt="Gallery Image" loading="lazy">
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ===== Mobile Hamburger & Drawer ===== */
+      const menuBtn = document.getElementById("menu-btn");
+      const sideBar = document.getElementById("side-bar");
+      const closeIcon = sideBar
+        ? sideBar.querySelector(".close-icon-menu")
+        : null;
+      const backdrop = document.getElementById("cgBackdrop");
+
+      function collapseAllSubmenus() {
+        const subs = sideBar?.querySelectorAll(".submenu");
+        subs?.forEach((ul) => (ul.style.display = "none"));
+      }
+
+      function openMenu() {
+        sideBar?.classList.add("is-open");
+        backdrop?.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+        collapseAllSubmenus(); // ensure closed by default
+      }
+      function closeMenu() {
+        sideBar?.classList.remove("is-open");
+        backdrop?.classList.remove("is-open");
+        document.body.style.overflow = "";
+      }
+
+      menuBtn?.addEventListener("click", openMenu);
+      closeIcon?.addEventListener("click", closeMenu);
+      backdrop?.addEventListener("click", closeMenu);
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      // Toggle submenus on mobile
+      sideBar?.addEventListener("click", (e) => {
+        const a = e.target.closest(".has-dropdown > a");
+        if (!a) return;
+        e.preventDefault();
+        const submenu = a.nextElementSibling;
+        if (!submenu) return;
+        const isOpen = submenu.style.display === "block";
+        // close siblings
+        const siblings = a.parentElement.parentElement.querySelectorAll(
+          ":scope > .has-dropdown > .submenu"
+        );
+        siblings.forEach((s) => s !== submenu && (s.style.display = "none"));
+        submenu.style.display = isOpen ? "none" : "block";
+      });
+
+      // Icons
+      const icons = {
+        heart:
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+        activity:
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
+        shield:
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+        briefcase:
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>',
+        users:
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+        zap: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+        eye: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>',
+        star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+        droplet:
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>',
+        package:
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
+        clipboard:
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>',
+        award:
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>',
+      };
+
+      // Gallery Data
+      const galleryData = [
+        {
+          src: "assets/machine-one.jpg",
+          size: "xlarge",
+          icon: "shield",
+        },
+        {
+          src: "assets/pharmacy.jpg",
+          size: "tall",
+          icon: "heart",
+        },
+        {
+          src: "assets/treatment-room.jpg",
+          size: "small",
+          icon: "briefcase",
+        },
+        {
+          src: "assets/pharmacy-store.jpg",
+          size: "medium",
+          icon: "activity",
+        },
+        {
+          src: "assets/treatment-cots.jpg",
+          size: "medium",
+          icon: "droplet",
+        },
+        {
+          src: "assets/machine-two.jpg",
+          size: "large",
+          icon: "users",
+        },
+        {
+          src: "assets/treatment-room.jpg",
+          size: "wide",
+          icon: "star",
+        },
+        {
+          src: "assets/treatment-beds.jpg",
+          size: "small",
+          icon: "eye",
+        },
+        {
+          src: "assets/gore-hospital-beds.jpg",
+          size: "small",
+          icon: "zap",
+        },
+      ];
+
+      // Populate Grid
+      const creativeGrid = document.getElementById("creativeGrid");
+      galleryData.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = `gallery-card ${item.size}`;
+        card.innerHTML = `
+        <div class="card-accent"></div>
+        <div class="card-img-wrapper">
+          <img src="${item.src}" alt="gore-hospital-image"
+               onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800'"/ loading="lazy">
+        </div>
+        <div class="card-icon">${icons[item.icon]}</div>
+        <div class="card-overlay"></div>
+      `;
+        card.addEventListener("click", () => openLightbox(item.src));
+        creativeGrid.appendChild(card);
+      });
+
+      // Lightbox
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const lightboxClose = document.getElementById("lightboxClose");
+
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+      lightboxClose?.addEventListener("click", closeLightbox);
+      lightbox?.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeLightbox();
+          closeMenu();
+        }
+      });
+
+      // ===== HORIZONTAL SCROLL WITH GSAP =====
+      gsap.registerPlugin(ScrollTrigger);
+
+      const section = document.getElementById("scrollSection");
+      const container = document.getElementById("cardsContainer");
+      const progressFill = document.getElementById("progressFill");
+      const thumbsContainer = document.getElementById("thumbnails");
+      const cards = document.querySelectorAll(".facility-card");
+
+      // Create thumbnails
+      cards.forEach((card, i) => {
+        const img = card.querySelector("img");
+        const thumb = document.createElement("div");
+        thumb.className = "thumb";
+        thumb.innerHTML = `<img src="${img.src}" alt="Thumbnail ${i + 1}"/ loading="lazy">`;
+        thumbsContainer.appendChild(thumb);
+      });
+
+      const thumbs = thumbsContainer.querySelectorAll(".thumb");
+
+      function initHorizontalScroll() {
+        if (window.innerWidth <= 991) {
+          gsap.set(container, { clearProps: "x" });
+          return;
+        }
+
+        const totalWidth = container.scrollWidth;
+        const viewportWidth = window.innerWidth;
+        const scrollDistance = totalWidth - viewportWidth;
+        if (scrollDistance <= 0) return;
+
+        gsap.to(container, {
+          x: -scrollDistance,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: `+=${scrollDistance * 2}`,
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1,
+            onUpdate: (self) => {
+              progressFill.style.width = `${self.progress * 100}%`;
+              const activeIndex = Math.floor(self.progress * cards.length);
+              thumbs.forEach((thumb, i) =>
+                thumb.classList.toggle("active", i === activeIndex)
+              );
+            },
+          },
+        });
+      }
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          collapseAllSubmenus(); // safety on load
+          initHorizontalScroll();
+          ScrollTrigger.refresh();
+        }, 300);
+      });
+
+      let resizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          ScrollTrigger.getAll().forEach((t) => t.kill());
+          initHorizontalScroll();
+          ScrollTrigger.refresh();
+        }, 300);
+      });
+    })();
+  </script>
+  <script src="https://assets.taskade.com/embeds/latest/taskade-embed.min.js"></script>
+  <script type="module">
+    TaskadeEmbed.AgentPublicChatPopup.init({
+      publicAgentId: "01K7KBX8K63VVH2RR5VFFXVX9D",
+    });
+  </script>
+  <script src="assets/js/footer.js"></script>
+</body>
+
+</html>

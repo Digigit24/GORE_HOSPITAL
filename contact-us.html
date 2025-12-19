@@ -1,0 +1,869 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logo.jpeg">
+  <title>Contact Us | Gore Multispeciality Hospital</title>
+  <meta name="google-site-verification" content="YaL9bjJrrw4NMWo8kMtrYa26zhWuCjb8xqnf5YWTL84">
+  <meta name="description"
+    content="Contact us for appointments or medical assistance at our multispeciality hospital in Ravet, Pimpri Chinchwad. Call +91 9689528414 anytime.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gorehospital.com/">
+  <meta property="og:title" content="Contact Us | Gore Multispeciality Hospital">
+  <meta property="og:description"
+    content="Contact us for appointments or medical assistance at our multispeciality hospital in Ravet, Pimpri Chinchwad. Call +91 9689528414 anytime.">
+  <meta property="og:image"
+    content="https://gorehospital.com/images/contact-gore-multispeciality-hospital-ravet-pimpri-chinchwad-pune.png">
+
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:url" content="https://gorehospital.com/">
+  <meta name="twitter:title"
+    content="Contact us for appointments or medical assistance at our multispeciality hospital in Ravet, Pimpri Chinchwad. Call +91 9689528414 anytime.">
+  <meta name="twitter:description"
+    content="Contact us for appointments or medical assistance at our multispeciality hospital in Ravet, Pimpri Chinchwad. Call +91 9689528414 anytime.">
+  <meta name="twitter:image"
+    content="https://gorehospital.com/images/contact-gore-multispeciality-hospital-ravet-pimpri-chinchwad-pune.png">
+
+  <meta name="google-site-verification" content="dLZg1y3EKmULqa1WODeAoMWPpKHYPyCSZ_bHDZ_-xEI" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://gorehospital.com/contact-us.html">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="assets/css/plugins/plugins.css">
+  <link rel="stylesheet" href="assets/css/plugins/magnifying-popup.css">
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    :root {
+      --primary: var(--color-primary, #2563eb);
+      --ink: #111827;
+      --muted: #6b7280;
+      --glass-bg: rgba(255, 255, 255, 0.72);
+      --glass-br: 22px;
+      --glass-bd: 1px solid rgba(255, 255, 255, 0.45);
+    }
+
+    /* ==== helpers ==== */
+    .fw-600 {
+      font-weight: 600;
+    }
+
+    .is-disabled {
+      filter: grayscale(1) opacity(0.55);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .is-disabled a {
+      cursor: not-allowed !important;
+    }
+
+    /* ==== page head (subtle) ==== */
+    .page-head {
+      padding: clamp(28px, 4vw, 48px) 0 10px;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 70%);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .page-head .title {
+      font-weight: 600;
+      font-size: clamp(26px, 3.6vw, 40px);
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 0 0 6px;
+    }
+
+    .page-head .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(14px, 2vw, 16px);
+      line-height: 1.6;
+      max-width: 820px;
+      /* prevent stretch */
+    }
+
+    /* ==== contact section (larger, glass, not cramped) ==== */
+    .contact-wrap {
+      padding: clamp(34px, 5vw, 80px) 0 clamp(46px, 6vw, 90px);
+      background: radial-gradient(60% 80% at 20% 10%,
+          rgba(37, 99, 235, 0.06),
+          transparent 60%),
+        radial-gradient(60% 80% at 80% 10%,
+          rgba(99, 102, 241, 0.06),
+          transparent 60%),
+        #f3f6fb;
+    }
+
+    .glass {
+      position: relative;
+      border-radius: var(--glass-br);
+      background: var(--glass-bg);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      border: var(--glass-bd);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        0 26px 70px rgba(2, 6, 23, 0.14);
+      /* bigger, as requested */
+      overflow: hidden;
+    }
+
+    .glass::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 -60px 90px rgba(2, 6, 23, 0.06);
+      pointer-events: none;
+    }
+
+    .contact-card {
+      padding: clamp(22px, 3vw, 34px);
+      max-width: 1200px;
+      /* limit line length */
+      margin-inline: auto;
+    }
+
+    @media (min-width: 992px) {
+      .contact-card {
+        display: grid;
+        grid-template-columns: 1.05fr 1.25fr;
+        gap: clamp(22px, 3vw, 34px);
+        min-height: 640px;
+        /* TALLER card */
+      }
+    }
+
+    /* left (details) */
+    .contact-left {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: center;
+      min-height: 420px;
+    }
+
+    .contact-left h2 {
+      font-weight: 600;
+      font-size: clamp(20px, 2.6vw, 28px);
+      line-height: 1.35;
+      color: var(--ink);
+      margin: 6px 0 8px;
+      max-width: 40ch;
+      /* avoid stretching long headings */
+    }
+
+    .fact {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 0;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+      max-width: 62ch;
+      /* tidy width */
+    }
+
+    .fact:last-child {
+      border-bottom: 0;
+    }
+
+    .fact .ico {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .label {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .value {
+      font-size: 16px;
+      color: var(--ink);
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .value a {
+      color: #0b48e1;
+      text-decoration: none;
+    }
+
+    .value a:hover {
+      text-decoration: underline;
+    }
+
+    .quick-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    .qa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      font-weight: 700;
+      text-decoration: none;
+      color: #0b48e1;
+      transition: 0.15s ease-in-out;
+    }
+
+    .qa:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(11, 72, 225, 0.14);
+    }
+
+    /* right (map) */
+    .map-wrap {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #eaeffb;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      min-height: 420px;
+      /* taller on mobile too */
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 100%;
+    }
+
+    .map-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* theme adjustments */
+    .rts-breadcrumb-area .title {
+      font-weight: 600;
+    }
+
+    .nav-area .is-disabled,
+    .mobile-menu .is-disabled {
+      filter: grayscale(1) opacity(0.55);
+      pointer-events: none;
+    }
+
+    .nav-area .is-disabled a,
+    .mobile-menu .is-disabled a {
+      cursor: not-allowed !important;
+    }
+
+    .is-disabled,
+    .is-disabled * {
+      filter: grayscale(100%) opacity(0.55);
+      pointer-events: none;
+      cursor: not-allowed !important;
+      text-decoration: none !important;
+    }
+
+    .social-icon {
+      color: white;
+      /* White color for the icons */
+      font-size: 15px;
+      /* Icon size */
+      text-decoration: none;
+      /* Remove underline */
+      margin-left: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #fefefe;
+      /* Change color on hover */
+      transform: scale(1.2);
+      /* Slightly increase the size of the icon */
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW2B3PV89M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HW2B3PV89M');
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ContactPage", "WebPage"],
+      "@id": "https://gorehospital.com/contact-us.html#webpage",
+      "url": "https://gorehospital.com/contact-us.html",
+      "name": "Contact Us - Gore Multispeciality Hospital",
+      "isPartOf": { "@id": "https://gorehospital.com/#website" },
+      "about": { "@id": "https://gorehospital.com/#hospital" },
+      "mainEntity": { "@id": "https://gorehospital.com/#hospital" },
+      "inLanguage": "en-IN"
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://gorehospital.com/#website",
+      "url": "https://gorehospital.com/",
+      "name": "Gore Multispeciality Hospital",
+      "publisher": { "@id": "https://gorehospital.com/#hospital" }
+    },
+
+    {
+      "@type": ["Hospital", "MedicalOrganization"],
+      "@id": "https://gorehospital.com/#hospital",
+      "name": "Gore Multispeciality Hospital",
+      "url": "https://gorehospital.com/",
+      "logo": "https://gorehospital.com/assets/logo.jpeg",
+      "image": "https://gorehospital.com/assets/group.png",
+      "telephone": "+91 96895 28414",
+      "email": [
+        "info@goremultispecialityhospital.com",
+        "goremultispecialityhospital01@gmail.com"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sr. No. 13/1A, In front of Blooming International School, Sai Nagar, Mamurdi",
+        "addressLocality": "Pimpri-Chinchwad",
+        "addressRegion": "Maharashtra",
+        "postalCode": "412101",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.6762882,
+        "longitude": 73.7120025
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "name": "Emergency",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "name": "OPD (Mon–Sat)",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "name": "OPD (Sunday)",
+          "dayOfWeek": ["Sunday"],
+          "opens": "10:00",
+          "closes": "14:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "@id": "https://gorehospital.com/#contact-appointments",
+          "telephone": "+91 96895 28414",
+          "contactType": "appointments",
+          "areaServed": "IN",
+          "availableLanguage": ["English","Hindi","Marathi"]
+        },
+        {
+          "@type": "ContactPoint",
+          "@id": "https://gorehospital.com/#contact-emergency",
+          "telephone": "+91 96895 28414",
+          "contactType": "emergency",
+          "areaServed": "IN",
+          "availableLanguage": ["English","Hindi","Marathi"]
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/gore.multispeciality.hospital",
+        "https://www.instagram.com/gore_multispeciality_hospital/",
+        "https://www.linkedin.com/company/gore-multispecialty-hospital/about/",
+        "https://www.youtube.com/@Goremultispecialityhospital"
+      ],
+      "hasMap": "https://www.google.com/maps/place/Gore+Multispeciality+Hospital+%E2%80%93+Mamurdi,+Ravet+(PCMC+Pune)/@18.6762882,73.7120025,785m/"
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gorehospital.com/contact-us.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gorehospital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://gorehospital.com/contact-us.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</head>
+<!-- Google Search -->
+
+
+
+<body>
+  <!-- HEADER (exact structure; only previously-commented items are now added as greyscale & unclickable) -->
+  <header class="header-one header--sticky">
+    <div class="header-top-area">
+      <div class="container-full-header">
+        <div class="col-lg-12">
+          <div class="header-top">
+            <div class="left">
+              <div class="map-area">
+                <i class="fa-sharp fa-regular fa-location-dot"></i>
+                <a href="https://maps.app.goo.gl/mQUofmKkM4vZiJsG9" target="_blank">Gore Multispeciality Hospital,
+                  Ravet, Pimpri Chinchwad
+                  PCMC </a>
+
+              </div>
+            </div>
+            <div class="social-media-icons">
+              <a href="https://www.facebook.com/gore.multispeciality.hospital" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="https://www.instagram.com/gore_multispeciality_hospital/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/gore-multispecialty-hospital/about/" target="_blank"
+                class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.youtube.com/@Goremultispecialityhospital" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+            <div class="right">
+              <div class="map-area">
+                <i class="fa-regular fa-phone"></i>
+                <a href="tel:+91 9689528414">24x7Emergency Line: +91 96895 28414</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-full-header">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-wrapper-1">
+            <div class="logo-area-start">
+              <a href="/index.html" class="logo">
+                <img width="100" src="assets/logo.jpeg" alt="lGore Hospital Logo">
+              </a>
+              <div class="nav-area">
+                <ul class="">
+                  <li class="main-nav">
+                    <a href="/index.html">Home</a>
+                  </li>
+
+                  <li class="main-nav mega-menu">
+                    <a href="/about-us.html">About</a>
+                  </li>
+
+                  <li class="main-nav has-dropdown mega-menu">
+                    <a href="#">Service</a>
+                    <div class="rts-mega-menu with-add">
+                      <div class="wrapper">
+                        <div class="row g-0">
+                          <div class="col-lg-9">
+                            <div class="menu-add-top-area">
+                              <h5 class="title">Our Treatments</h5>
+                            </div>
+                            <div class="row pl--30 pt--30">
+                              <!-- Col 1 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/cardiology.html">
+                                      <img src="assets/cardiology.png" alt="service" class="service-logo">Cardiology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pediatric.html">
+                                      <img src="assets/Paediatrics.png" alt="service"
+                                        class="service-logo">Paediatrics</a>
+                                  </li>
+                                  <!-- Neurology (not ready) -->
+                                  <li>
+                                    <a href="/services/neurology.html">
+                                      <img src="assets/nephrology.png" alt="service" class="service-logo">Neurology</a>
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <!-- Col 2 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/orthopaedics.html">
+                                      <img src="assets/orthopaedics.png" alt="service"
+                                        class="service-logo">Orthopaedics</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/family-physician.html">
+                                      <img src="assets/family-physician.png" alt="service" class="service-logo">Family
+                                      Physician</a>
+                                  </li>
+
+                                  <li>
+                                    <a href="/services/gynaecology.html">
+                                      <img src="assets/gynecology.png" alt="service" class="service-logo">Gynecology</a>
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <!-- Col 3 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/endocrinology.html">
+                                      <img src="assets/Endocrinolog.png" alt="service"
+                                        class="service-logo">Endocrinology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/nephrology.html">
+                                      <img src="assets/nephrology.png" alt="service" class="service-logo">Nephrology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/gastrology.html">
+                                      <img src="assets/gastrology-treatment.png" alt="service"
+                                        class="service-logo">Gastrology</a>
+                                  </li>
+
+
+                                </ul>
+                              </div>
+                              <!-- Col 4 -->
+                              <div class="col-lg-3">
+                                <ul class="mega-menu-item">
+                                  <li>
+                                    <a href="/services/ent.html">
+                                      <img src="assets/ent-img.png" alt="service" class="service-logo">ENT</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/pulmonology.html">
+                                      <img src="assets/Pulmonology.png" alt="service"
+                                        class="service-logo">Pulmonology</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/cancer-care.html">
+                                      <img src="assets/cancer-care-treatment.png" alt="service"
+                                        class="service-logo">Cancer
+                                      Care</a>
+                                  </li>
+                                  <li>
+                                    <a href="/services/radiology.html">
+                                      <img src="assets/radiology.png" alt="service" class="service-logo">Radiology</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Right side -->
+                          <div class="col-lg-3">
+                            <div class="menu-right-add">
+                              <img src="assets/01_menu.webp" alt="gore-hospital-image" loading="lazy">
+                              <div class="absolute-image">
+                                <img src="assets/02_menu.webp" alt="gore-hospital-image" loading="lazy">
+                                <div class="inner-content">
+                                  <h3 class="title">
+                                    Trust Your Heart to <br>
+                                    The Experts
+                                  </h3>
+                                  <a href="/appointment.html" class="rts-btn btn-primary">Appointment</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /Right -->
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="main-nav">
+                    <a href="./our-doctors.html">Our Doctors</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./blog.html">Blog</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./gallery.html">Gallery</a>
+                  </li>
+                  <li class="main-nav">
+                    <a href="./contact-us.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-right">
+              <!-- search removed per request -->
+              <a href="/appointment.html" class="rts-btn btn-primary">Appointment
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy"></a>
+              <div class="menu-btn" id="menu-btn">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
+                  <rect width="20" height="2" fill="#1F1F25"></rect>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+  <!-- MOBILE SIDE BAR (mirrors exact greyscale rule) -->
+  <div id="side-bar" class="side-bar header-two">
+    <button class="close-icon-menu"><i class="far fa-times"></i></button>
+    <div class="mobile-menu-main">
+      <nav class="nav-main mainmenu-nav mt--30">
+        <ul class="mainmenu metismenu" id="mobile-menu-active">
+          <li><a href="/index.html" class="main">Home</a></li>
+          <li><a href="/about-us.html" class="main">About</a></li>
+
+          <li class="has-droupdown">
+            <a href="#" class="main">Service</a>
+            <ul class="submenu mm-collapse">
+              <li class="has-droupdown">
+                <a href="#" class="main">Cardiac & Child Care</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/cardiology.html"><img src="assets/cardiology.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Cardiology</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/pediatric.html"><img src="assets/Paediatrics.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Paediatrics</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/neurology.html"><img src="assets/nephrology.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Neurology</a>
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="has-droupdown">
+                <a href="#" class="main">Medicine & Skin</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/orthopaedics.html"><img src="assets/orthopaedics.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Orthopaedics</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/family-physician.html"><img
+                        src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Family Physician</a>
+                  </li>
+
+                  <li>
+                    <a class="mobile-menu-link" href="/services/gynaecology.html"><img src="assets/gynecology.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Gynecology</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="has-droupdown">
+                <a href="#" class="main">Advanced Care</a>
+                <ul class="submenu mm-collapse">
+                  <li>
+                    <a class="mobile-menu-link" href="/services/endocrinology.html"><img src="assets/Endocrinolog.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Endocrinology</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/nephrology.html"><img src="assets/nephrology.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Nephrology</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/cancer-care.html"><img
+                        src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Cancer Care</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu-link" href="/services/radiology.html"><img src="assets/radiology.png"
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                      Radiology</a>
+                  </li>
+                </ul>
+              </li>
+
+
+            </ul>
+          </li>
+          <li><a href="/blog.html" class="main">Blog</a></li>
+          <li><a href="/gallery.html" class="main">Gallery</a></li>
+          <li><a href="/contact-us.html" class="main">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- /MOBILE -->
+
+  <!-- Breadcrumb (kept subtle) -->
+  <div class="rts-breadcrumb-area bg_image rts-section-gap">
+    <div class="container ptb--40">
+      <div class="row">
+        <div class="breadcrumb-area-wrapper">
+          <h1 class="title">Contact</h1>
+          <div class="nav-bread-crumb">
+            <a href="/index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="#" class="current">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT (Glass, bigger, non-stretched) -->
+  <section class="contact-wrap">
+    <div class="container">
+      <div class="glass">
+        <div class="contact-card">
+          <!-- Left: Details -->
+          <div class="contact-left">
+            <h2 class="fw-600">Gore Multispeciality Hospital</h2>
+
+            <div class="fact">
+              <div class="ico">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="label">Address</div>
+                <div class="value">
+                  1, Infront, Sr.no. 13/1A, off Blooming International School,
+                  Sai Nagar, Mamurdi,<br>
+                  Pimpri-Chinchwad, Dehu Road, Maharashtra 412101
+                </div>
+              </div>
+            </div>
+
+            <div class="fact">
+              <div class="ico">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .57 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.57 2 2 0 0 1 1.72 2z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <div class="label">Phone</div>
+                <div class="value">
+                  <a href="tel:+919689528414">096895 28414</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="fact">
+              <div class="ico">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="label">Hours</div>
+                <div class="value">Open 24 hours</div>
+              </div>
+            </div>
+
+            <div class="quick-actions">
+              <a class="qa"
+                href="https://www.google.com/maps/dir/?api=1&destination=Gore%20Multispeciality%20Hospital%20Mamurdi%20412101"
+                target="_blank" rel="noopener">Get Directions</a>
+              <a class="qa" href="/appointment.html">Book Appointment</a>
+            </div>
+          </div>
+
+          <!-- Right: Map -->
+          <div class="map-wrap">
+            <div class="map-embed">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.725986198649!2d73.7120025!3d18.676288199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b189a3a2c875%3A0xb781203a529c9154!2sGore%20Multispeciality%20Hospital%20%E2%80%93%20Mamurdi%2C%20Ravet%20(PCMC%20Pune)!5e0!3m2!1sen!2sin!4v1762861845353!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <div id="footer-placeholder"></div>
+
+
+  <!-- theme scripts -->
+  <script src="assets/js/plugins/jquery.js"></script>
+  <script src="assets/js/plugins/jquery-ui.js"></script>
+  <script src="assets/js/vendor/waw.js"></script>
+  <script src="assets/js/plugins/swiper.js"></script>
+  <script src="assets/js/plugins/metismenu.js"></script>
+  <script src="assets/js/plugins/jarallax.js"></script>
+  <script src="assets/js/plugins/smooth-scroll.js"></script>
+  <script src="assets/js/plugins/magnifying-popup.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://assets.taskade.com/embeds/latest/taskade-embed.min.js"></script>
+  <script type="module">
+    TaskadeEmbed.AgentPublicChatPopup.init({
+      publicAgentId: "01K7KBX8K63VVH2RR5VFFXVX9D",
+    });
+  </script>
+  <script src="assets/js/form-integration.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+
+</html>
