@@ -1516,7 +1516,9 @@
 
                                     <a href="/services/orthopaedics.html">
 
-                                      <img src="#" alt="service" class="service-logo">Orthopaedics</a>
+                                      <img src="/assets/orthopaedics.png" alt="service"
+                                        class="service-logo">Orthopaedics</a>
+
 
                                   </li>
 
@@ -1989,7 +1991,7 @@
 
               <div class="left-side">
 
-                <div class="icon"><img src="#" alt="service" loading="lazy"></div>
+                <div class="icon"><img src="/assets/orthopaedics.png" alt="service" loading="lazy"></div>
 
                 <h4 class="title">Orthopedics</h4>
 
@@ -3099,7 +3101,8 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/family-physician.html"><img
-                        src="/assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="/assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
 
                       Family Physician</a>
 
@@ -3149,7 +3152,8 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/cancer-care.html"><img
-                        src="/assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="/assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
 
                       Cancer Care</a>
 
@@ -3272,7 +3276,7 @@
 
 
 
-        // Auto-detect generic images and convert to gradient cards
+    // Auto-detect generic images and convert to gradient cards
     (function () {
       const genericImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
       const grid = document.querySelector(".doc-grid");
@@ -3294,10 +3298,10 @@
 
           // Add scanner line animation if not present
           if (!card.querySelector('.scan-line')) {
-              const scanLine = document.createElement('div');
-              scanLine.className = 'scan-line';
-              const photoDiv = card.querySelector('.doc-photo');
-              if(photoDiv) photoDiv.appendChild(scanLine);
+            const scanLine = document.createElement('div');
+            scanLine.className = 'scan-line';
+            const photoDiv = card.querySelector('.doc-photo');
+            if (photoDiv) photoDiv.appendChild(scanLine);
           }
 
           cardsWithoutImages.push(card);

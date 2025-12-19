@@ -1382,7 +1382,9 @@
 
                                     <a href="/services/orthopaedics.html">
 
-                                      <img src="#" alt="service" class="service-logo">Orthopaedics</a>
+                                      <img src="/assets/orthopaedics.png" alt="service"
+                                        class="service-logo">Orthopaedics</a>
+
 
                                   </li>
 
@@ -1887,7 +1889,7 @@
 
               <div class="left-side">
 
-                <div class="icon"><img src="#" alt="service" loading="lazy"></div>
+                <div class="icon"><img src="/assets/orthopaedics.png" alt="service" loading="lazy"></div>
 
                 <h4 class="title">Orthopedics</h4>
 
@@ -2309,8 +2311,8 @@
                   <p class="disc">"Took my father for stomach treatment. Doctors explained well, staff supported us
                     throughout, and he recovered quickly."</p>
                   <div class="author-area">
-                    <a href="#" class="img review-img"><img src="/images/shaily-testimonial-img.jpg"
-                        alt="testiminials" loading="lazy"></a>
+                    <a href="#" class="img review-img"><img src="/images/shaily-testimonial-img.jpg" alt="testiminials"
+                        loading="lazy"></a>
                     <div class="info">
                       <h6 class="name">Shaily</h6>
                       <div class="stars-area">
@@ -2349,8 +2351,8 @@
                   <p class="disc">"Gore Hospital provides the best surgical care with a clean, good environment and
                     helpful staff, making it a trusted choice for many patients."</p>
                   <div class="author-area">
-                    <a href="#" class="img review-img"><img src="/images/bittu-testimonial-img.jpg"
-                        alt="testiminials" loading="lazy"></a>
+                    <a href="#" class="img review-img"><img src="/images/bittu-testimonial-img.jpg" alt="testiminials"
+                        loading="lazy"></a>
                     <div class="info">
                       <h6 class="name">Bittu Das</h6>
                       <div class="stars-area">
@@ -2369,8 +2371,8 @@
                   <p class="disc">"Dr. Dattesh Gore treated my dengue. Good service, affordable charges, and very
                     cooperative doctors. A reliable hospital for middle-class families."</p>
                   <div class="author-area">
-                    <a href="#" class="img review-img"><img src="/images/rohit-testimonial-img.jpg"
-                        alt="testiminials" loading="lazy"></a>
+                    <a href="#" class="img review-img"><img src="/images/rohit-testimonial-img.jpg" alt="testiminials"
+                        loading="lazy"></a>
                     <div class="info">
                       <h6 class="name">Rohit Shinde</h6>
                       <div class="stars-area">
@@ -2624,7 +2626,8 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/family-physician.html"><img
-                        src="/assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="/assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
 
                       Family Physician</a>
 
@@ -2674,7 +2677,8 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/cancer-care.html"><img
-                        src="/assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="/assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
 
                       Cancer Care</a>
 
@@ -2797,7 +2801,7 @@
 
 
 
-        // Auto-detect generic images and convert to gradient cards
+    // Auto-detect generic images and convert to gradient cards
     (function () {
       const genericImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
       const grid = document.querySelector(".doc-grid");
@@ -2819,10 +2823,10 @@
 
           // Add scanner line animation if not present
           if (!card.querySelector('.scan-line')) {
-              const scanLine = document.createElement('div');
-              scanLine.className = 'scan-line';
-              const photoDiv = card.querySelector('.doc-photo');
-              if(photoDiv) photoDiv.appendChild(scanLine);
+            const scanLine = document.createElement('div');
+            scanLine.className = 'scan-line';
+            const photoDiv = card.querySelector('.doc-photo');
+            if (photoDiv) photoDiv.appendChild(scanLine);
           }
 
           cardsWithoutImages.push(card);

@@ -460,7 +460,8 @@
       height: auto;
       min-height: 110px;
     }
-/* Scroll reveal */
+
+    /* Scroll reveal */
     .doctor-card-io {
       visibility: visible !important;
       opacity: 1;
@@ -918,7 +919,9 @@
                                 <ul class="mega-menu-item">
                                   <li>
                                     <a href="/services/orthopaedics.html">
-                                      <img src="#" alt="service" class="service-logo">Orthopaedics</a>
+                                      <img src="/assets/orthopaedics.png" alt="service"
+                                        class="service-logo">Orthopaedics</a>
+
                                   </li>
                                   <li>
                                     <a href="/services/family-physician.html">
@@ -1172,7 +1175,7 @@
 
             <a href="/services/orthopaedics.html" class="single-department-service-wrapper">
               <div class="left-side">
-                <div class="icon"><img src="#" alt="service" loading="lazy"></div>
+                <div class="icon"><img src="/assets/orthopaedics.png" alt="service" loading="lazy"></div>
                 <h4 class="title">Orthopedics</h4>
               </div>
               <i class="fa-regular fa-arrow-right"></i>
@@ -1989,7 +1992,8 @@
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/family-physician.html"><img
-                        src="/assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="/assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
                       Family Physician</a>
                   </li>
 
@@ -2016,7 +2020,8 @@
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/cancer-care.html"><img
-                        src="/assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="/assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
                       Cancer Care</a>
                   </li>
                   <li>
@@ -2077,7 +2082,7 @@
       }
     });
 
-            // Auto-detect generic images and convert to gradient cards
+    // Auto-detect generic images and convert to gradient cards
     (function () {
       const genericImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
       const grid = document.querySelector(".doc-grid");
@@ -2099,10 +2104,10 @@
 
           // Add scanner line animation if not present
           if (!card.querySelector('.scan-line')) {
-              const scanLine = document.createElement('div');
-              scanLine.className = 'scan-line';
-              const photoDiv = card.querySelector('.doc-photo');
-              if(photoDiv) photoDiv.appendChild(scanLine);
+            const scanLine = document.createElement('div');
+            scanLine.className = 'scan-line';
+            const photoDiv = card.querySelector('.doc-photo');
+            if (photoDiv) photoDiv.appendChild(scanLine);
           }
 
           cardsWithoutImages.push(card);
