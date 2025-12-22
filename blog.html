@@ -1021,6 +1021,7 @@
 
       margin-top: 0 !important;
       /* kill any negative margins from theme */
+      align-items: center;
 
     }
 
@@ -1081,559 +1082,7 @@
 
 
 
-<script>
 
-  // ===== WORDPRESS CONFIG (CLIENT-SIDE SEARCH VERSION) =====
-
-  const WP_API_BASE =
-
-    "https://public-api.wordpress.com/wp/v2/sites/goreblogs8.wordpress.com";
-
-
-
-  const POSTS_PER_PAGE = 6;
-
-
-
-  let allPosts = [];
-
-  let filteredPosts = [];
-
-  let currentPage = 1;
-
-  let totalPages = 1;
-
-
-
-  // ===== UTIL =====
-
-  function stripHTML(html) {
-
-    const div = document.createElement("div");
-
-    div.innerHTML = html || "";
-
-    return div.textContent || div.innerText || "";
-
-  }
-
-
-
-  function getImageUrl(post) {
-
-    let imageUrl = "";
-
-
-
-    // Jetpack featured image (common on WordPress.com)
-
-    if (post.jetpack_featured_media_url) {
-
-      imageUrl = post.jetpack_featured_media_url;
-
-    }
-
-
-
-    // _embedded featured media (fallback)
-
-    if (
-
-      !imageUrl &&
-
-      post._embedded &&
-
-      post._embedded["wp:featuredmedia"] &&
-
-      post._embedded["wp:featuredmedia"][0] &&
-
-      post._embedded["wp:featuredmedia"][0].source_url
-
-    ) {
-
-      imageUrl = post._embedded["wp:featuredmedia"][0].source_url;
-
-    }
-
-
-
-    // fallback: first image in content
-
-    if (!imageUrl && post.content && post.content.rendered) {
-
-      const match = post.content.rendered.match(/<img[^>]+src="([^">]+)"/i);
-
-      if (match) imageUrl = match[1];
-
-    }
-
-
-
-    return imageUrl;
-
-  }
-
-
-
-  // ===== BLOG CARD RENDER =====
-
-  // Assuming `post` object contains the necessary post data from WordPress API
-  function createPostColumn(post) {
-    const title = post.title?.rendered || "";
-    const cleanTitle = stripHTML(title);
-
-    const excerptRaw = post.excerpt?.rendered || "";
-    const plainExcerpt = stripHTML(excerptRaw);
-    const excerpt = plainExcerpt.length > 150 ? plainExcerpt.slice(0, 150) + "..." : plainExcerpt;
-
-    const date = new Date(post.date).toLocaleDateString("en-IN", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric"
-    });
-
-    // Fetch slug dynamically from WordPress response
-    const postSlug = post.slug;
-
-    // Construct the URL for the post using the slug
-    const link = `/blog-post.html?slug=${postSlug}`;
-
-    const imageUrl = getImageUrl(post);
-
-    return `
-        <div class="col-lg-6 col-md-6">
-            <article class="single-blog-card">
-                <div class="thumb">
-                    ${imageUrl ? `<img src="${imageUrl}" alt="${cleanTitle.replace(/"/g, "&quot;")}">` : ""}
-                </div>
-                <div class="blog-content">
-                    <h3 class="title">
-                        <a href="${link}">${title}</a>
-                    </h3>
-                    <p class="disc">${excerpt}</p>
-                    <a href="${link}" class="read-more">Read More</a>
-                </div>
-            </article>
-        </div>
-    `;
-  }
-
-
-  // ===== SIDEBAR: LATEST ARTICLES =====
-
-  function renderLatestSidebar(posts) {
-
-    const listEl = document.getElementById("latest-posts-list");
-
-    if (!listEl) return;
-
-
-
-    if (!posts || !posts.length) {
-
-      listEl.innerHTML = `
-
-        <li class="latest-posts-item">
-
-          <span class="latest-post-title">No recent articles.</span>
-
-        </li>
-
-      `;
-
-      return;
-
-    }
-
-
-
-    const latest = posts.slice(0, 4);
-
-    const fallbackThumb = "assets/images/blog/latest-thumb.jpg";
-
-
-
-    const itemsHtml = latest
-
-      .map((post) => {
-
-        const title = stripHTML(post.title?.rendered || "Health article");
-
-        const date = new Date(post.date).toLocaleDateString("en-IN", {
-
-          day: "2-digit",
-
-          month: "short",
-
-          year: "numeric"
-
-        });
-
-        const postId = post.id;
-
-        const url = `/blog-post.html?slug=${post.slug}`;
-
-        let imageUrl = getImageUrl(post) || fallbackThumb;
-
-
-
-        return `
-
-          <li class="latest-posts-item">
-
-            <a href="${url}" class="latest-post-link">
-
-              <div class="latest-post-thumb">
-
-                <img src="${imageUrl}" alt="Health article" loading="lazy">
-
-              </div>
-
-              <div class="latest-post-text">
-
-                <div class="latest-post-title">${title}</div>
-
-                <span class="latest-post-date">${date}</span>
-
-              </div>
-
-            </a>
-
-          </li>
-
-        `;
-
-      })
-
-      .join("");
-
-
-
-    listEl.innerHTML = itemsHtml;
-
-  }
-
-
-
-  // ===== PAGINATION RENDER =====
-
-  function createPagination() {
-
-    const paginationContainer = document.getElementById("pagination");
-
-    if (!paginationContainer) return;
-
-
-
-    if (!filteredPosts.length) {
-
-      paginationContainer.innerHTML = "";
-
-      return;
-
-    }
-
-
-
-    let html = "";
-
-
-
-    if (currentPage > 1) {
-
-      html += `<a href="javascript:void(0);" class="pagination-link" onclick="changePage(${currentPage -
-
-        1})">Previous</a>`;
-
-    }
-
-
-
-    for (let i = 1; i <= totalPages; i++) {
-
-      html += `
-
-        <a href="javascript:void(0);" 
-
-           class="pagination-link ${i === currentPage ? "active" : ""}" 
-
-           onclick="changePage(${i})">${i}</a>
-
-      `;
-
-    }
-
-
-
-    if (currentPage < totalPages) {
-
-      html += `<a href="javascript:void(0);" class="pagination-link" onclick="changePage(${currentPage +
-
-        1})">Next</a>`;
-
-    }
-
-
-
-    paginationContainer.innerHTML = html;
-
-  }
-
-
-
-  // ===== RENDER CURRENT PAGE POSTS =====
-
-  function renderPostsForCurrentPage() {
-
-    const container = document.getElementById("blog-list");
-
-    if (!container) return;
-
-
-
-    if (!filteredPosts.length) {
-
-      container.innerHTML =
-
-        '<div class="col-12"><p class="text-center">No blog posts found.</p></div>';
-
-      createPagination();
-
-      renderLatestSidebar([]);
-
-      return;
-
-    }
-
-
-
-    const start = (currentPage - 1) * POSTS_PER_PAGE;
-
-    const end = start + POSTS_PER_PAGE;
-
-    const pagePosts = filteredPosts.slice(start, end);
-
-
-
-    container.innerHTML = pagePosts.map(createPostColumn).join("");
-
-
-
-    createPagination();
-
-
-
-    // Sidebar shows latest overall posts
-
-    renderLatestSidebar(allPosts);
-
-  }
-
-
-
-  // ===== GLOBAL FOR PAGINATION LINKS =====
-
-  function changePage(pageNumber) {
-
-    if (pageNumber < 1 || pageNumber > totalPages) return;
-
-    currentPage = pageNumber;
-
-    renderPostsForCurrentPage();
-
-  }
-
-
-
-  window.changePage = changePage;
-
-
-
-  // ===== LOAD ALL POSTS ONCE =====
-
-  async function loadAllPosts() {
-
-    try {
-
-      const res = await fetch(
-
-        `${WP_API_BASE}/posts?per_page=100&page=1&_embed=1&orderby=date`
-
-      );
-
-      if (!res.ok) {
-
-        console.error("Failed to fetch posts:", res.status);
-
-        allPosts = [];
-
-        filteredPosts = [];
-
-        totalPages = 1;
-
-        renderPostsForCurrentPage();
-
-        return;
-
-      }
-
-
-
-      allPosts = await res.json();
-
-      if (!Array.isArray(allPosts)) allPosts = [];
-
-
-
-      // default: filtered = all
-
-      filteredPosts = allPosts.slice();
-
-      totalPages = Math.max(
-
-        1,
-
-        Math.ceil(filteredPosts.length / POSTS_PER_PAGE)
-
-      );
-
-    } catch (err) {
-
-      console.error("Error loading posts:", err);
-
-      allPosts = [];
-
-      filteredPosts = [];
-
-      totalPages = 1;
-
-    }
-
-  }
-
-
-
-  // ===== APPLY SEARCH FILTER (CLIENT-SIDE) =====
-
-  function applySearch(term) {
-
-    const q = (term || "").toLowerCase();
-
-
-
-    if (!q) {
-
-      filteredPosts = allPosts.slice();
-
-    } else {
-
-      filteredPosts = allPosts.filter((post) => {
-
-        const title = stripHTML(post.title?.rendered || "").toLowerCase();
-
-        const excerpt = stripHTML(
-
-          post.excerpt?.rendered || post.content?.rendered || ""
-
-        ).toLowerCase();
-
-        return title.includes(q) || excerpt.includes(q);
-
-      });
-
-    }
-
-
-
-    totalPages = Math.max(
-
-      1,
-
-      Math.ceil(filteredPosts.length / POSTS_PER_PAGE)
-
-    );
-
-    currentPage = 1;
-
-    renderPostsForCurrentPage();
-
-  }
-
-
-
-  // ===== INIT ON PAGE LOAD =====
-
-  document.addEventListener("DOMContentLoaded", async function () {
-
-    const params = new URLSearchParams(window.location.search);
-
-    const initialSearch = params.get("search") || "";
-
-
-
-    const input = document.getElementById("search-input");
-
-    if (input && initialSearch) {
-
-      input.value = initialSearch;
-
-    }
-
-
-
-    await loadAllPosts();
-
-
-
-    // apply initial filter from URL (if any)
-
-    applySearch(initialSearch);
-
-
-
-    const searchForm = document.getElementById("search-form");
-
-    if (searchForm) {
-
-      searchForm.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const termInput = document.getElementById("search-input");
-
-        const term = termInput ? termInput.value.trim() : "";
-
-
-
-        // update URL without reload
-
-        const newParams = new URLSearchParams(window.location.search);
-
-        if (term) newParams.set("search", term);
-
-        else newParams.delete("search");
-
-
-
-        const newUrl =
-
-          window.location.pathname +
-
-          (newParams.toString() ? "?" + newParams.toString() : "");
-
-        window.history.replaceState({}, "", newUrl);
-
-
-
-        applySearch(term);
-
-      });
-
-    }
-
-  });
-
-</script>
 
 
 
@@ -2092,7 +1541,75 @@
 
           <div class="row g-4" id="blog-list">
 
-            <!-- WordPress blog posts injected here -->
+            <!-- Blog Post 1 -->
+            <div class="col-lg-6 col-md-6">
+              <article class="single-blog-card">
+                <div class="thumb">
+                  <img src="assets/irregular-periods-in-teens-blog-gore-image.png" alt="Irregular Periods in Teens">
+                </div>
+                <div class="blog-content">
+                  <h3 class="title">
+                    <a href="blogs/irregular-periods-in-teens.html">Irregular Periods in Teens: Causes and When to See a Doctor</a>
+                  </h3>
+                  <p class="disc">Learn about the common causes of irregular menstrual cycles in teenagers and when it's
+                    important to consult a specialist.</p>
+                  <a href="/blogs/irregular-periods-in-teens.html" class="read-more">Read More</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="col-lg-6 col-md-6">
+              <article class="single-blog-card">
+                <div class="thumb">
+                  <img src="assets/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.png"
+                    alt="Minimally Invasive Orthopaedic Surgery">
+                </div>
+                <div class="blog-content">
+                  <h3 class="title">
+                    <a href="/blogs/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.html">Minimally Invasive Orthopaedic Surgery: Faster Recovery, Less Pain</a>
+                  </h3>
+                  <p class="disc">Discover the benefits of minimally invasive techniques in orthopaedic surgery for
+                    quicker healing and reduced post-operative discomfort.</p>
+                  <a href="/blogs/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.html" class="read-more">Read More</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="col-lg-6 col-md-6">
+              <article class="single-blog-card">
+                <div class="thumb">
+                  <img src="assets/signs-you-need-arthroscopic-surgery-for-sports-injury.png"
+                    alt="Arthroscopic Surgery for Sports Injury">
+                </div>
+                <div class="blog-content">
+                  <h3 class="title">
+                    <a href="/blogs/signs-your-sports-injury-needs-arthroscopic-surgery-immediately.html">Signs You Need Arthroscopic Surgery for Sports Injury</a>
+                  </h3>
+                  <p class="disc">Identifying the key symptoms that indicate arthroscopic surgery might be necessary for
+                    treating sports-related joint injuries.</p>
+                  <a href="/blogs/signs-your-sports-injury-needs-arthroscopic-surgery-immediately.html" class="read-more">Read More</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Blog Post 4 -->
+            <div class="col-lg-6 col-md-6">
+              <article class="single-blog-card">
+                <div class="thumb">
+                  <img src="assets/what-are-the-most-common-ent-surgeries.png" alt="Common ENT Surgeries">
+                </div>
+                <div class="blog-content">
+                  <h3 class="title">
+                    <a href="/blogs/what-are-the-most-common-ent-surgeries.html">What are the Most Common ENT Surgeries?</a>
+                  </h3>
+                  <p class="disc">A comprehensive guide to the most frequently performed ear, nose, and throat surgeries
+                    and what to expect from each procedure.</p>
+                  <a href="/blogs/what-are-the-most-common-ent-surgeries.html" class="read-more">Read More</a>
+                </div>
+              </article>
+            </div>
 
           </div>
 
@@ -2153,7 +1670,44 @@
 
                 <h4>Latest Articles</h4>
 
-                <ul id="latest-posts-list" class="latest-posts-list"></ul>
+                <ul id="latest-posts-list" class="latest-posts-list">
+                  <li class="latest-posts-item">
+                    <a href="/blogs/irregular-periods-in-teens.html" class="latest-post-link">
+                      <div class="latest-post-thumb">
+                        <img src="assets/irregular-periods-in-teens-blog-gore-image.png" alt="Health article"
+                          loading="lazy">
+                      </div>
+                      <div class="latest-post-text">
+                        <div class="latest-post-title">Irregular Periods in Teens</div>
+                        <span class="latest-post-date">24 Nov 2025</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="latest-posts-item">
+                    <a href="/blogs/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.html" class="latest-post-link">
+                      <div class="latest-post-thumb">
+                        <img src="assets/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.png"
+                          alt="Health article" loading="lazy">
+                      </div>
+                      <div class="latest-post-text">
+                        <div class="latest-post-title">Minimally Invasive Orthopaedic Surgery</div>
+                        <span class="latest-post-date">24 Nov 2025</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="latest-posts-item">
+                    <a href="/blogs/signs-your-sports-injury-needs-arthroscopic-surgery-immediately.html" class="latest-post-link">
+                      <div class="latest-post-thumb">
+                        <img src="assets/signs-you-need-arthroscopic-surgery-for-sports-injury.png" alt="Health article"
+                          loading="lazy">
+                      </div>
+                      <div class="latest-post-text">
+                        <div class="latest-post-title">Signs You Need Arthroscopic Surgery</div>
+                        <span class="latest-post-date">24 Nov 2025</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
 
               </div>
 
@@ -2563,6 +2117,112 @@
   </script>
 
 
+
+  <script>
+   
+    const POSTS_PER_PAGE = 6;
+    let filteredPosts = [...allPosts];
+    let currentPage = 1;
+    let totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+
+
+    // Render pagination
+    function renderPagination() {
+      const paginationContainer = document.getElementById('pagination');
+      if (!paginationContainer) return;
+
+      if (totalPages <= 1) {
+        paginationContainer.innerHTML = '';
+        return;
+      }
+
+      let html = '';
+
+      // Previous button
+      if (currentPage > 1) {
+        html += `<a href="javascript:void(0);" class="pagination-link" onclick="changePage(${currentPage - 1})">Previous</a>`;
+      }
+
+      // Page numbers
+      for (let i = 1; i <= totalPages; i++) {
+        html += `<a href="javascript:void(0);" class="pagination-link ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</a>`;
+      }
+
+      // Next button
+      if (currentPage < totalPages) {
+        html += `<a href="javascript:void(0);" class="pagination-link" onclick="changePage(${currentPage + 1})">Next</a>`;
+      }
+
+      paginationContainer.innerHTML = html;
+    }
+
+    // Change page
+    function changePage(pageNumber) {
+      if (pageNumber < 1 || pageNumber > totalPages) return;
+      currentPage = pageNumber;
+      renderPosts();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Make changePage globally accessible
+    window.changePage = changePage;
+
+    // Search functionality
+    function applySearch(searchTerm) {
+      const query = searchTerm.toLowerCase().trim();
+
+      if (!query) {
+        filteredPosts = [...allPosts];
+      } else {
+        filteredPosts = allPosts.filter(post => {
+          return post.title.toLowerCase().includes(query) ||
+            post.excerpt.toLowerCase().includes(query);
+        });
+      }
+
+      totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+      currentPage = 1;
+      renderPosts();
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check for search parameter in URL
+      const params = new URLSearchParams(window.location.search);
+      const initialSearch = params.get('search') || '';
+
+      const searchInput = document.getElementById('search-input');
+      if (searchInput && initialSearch) {
+        searchInput.value = initialSearch;
+      }
+
+      // Apply initial search if any
+      applySearch(initialSearch);
+
+      // Search form handler
+      const searchForm = document.getElementById('search-form');
+      if (searchForm) {
+        searchForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const termInput = document.getElementById('search-input');
+          const term = termInput ? termInput.value.trim() : '';
+
+          // Update URL without reload
+          const newParams = new URLSearchParams(window.location.search);
+          if (term) {
+            newParams.set('search', term);
+          } else {
+            newParams.delete('search');
+          }
+
+          const newUrl = window.location.pathname + (newParams.toString() ? '?' + newParams.toString() : '');
+          window.history.replaceState({}, '', newUrl);
+
+          applySearch(term);
+        });
+      }
+    });
+  </script>
 
   <script src="https://assets.taskade.com/embeds/latest/taskade-embed.min.js"></script>
 
