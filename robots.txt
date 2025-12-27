@@ -79,25 +79,25 @@ Allow: /
 # We block these so they have to use "Search" bots (above) instead.
 # =========================================================
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 User-agent: Bytespider
-Disallow: /
+Allow: /
 
 User-agent: FacebookBot
-Disallow: /
+Allow: /
 
 User-agent: Amazonbot
-Disallow: /
+Allow: /
 
 # =========================================================
 # 5. SITEMAPS (Multiple sitemaps for deep indexing)
@@ -106,3 +106,4 @@ Sitemap: https://gorehospital.com/sitemap/sitemap.xml
 Sitemap: https://gorehospital.com/sitemap/sitemap-services.xml
 Sitemap: https://gorehospital.com/sitemap/sitemap-clinic-info.xml
 Sitemap:https://gorehospital.com/sitemap/sitemap-blogs.xml
+Sitemap: https://gorehospital.com/llms.txt
