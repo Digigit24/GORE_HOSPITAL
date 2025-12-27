@@ -1,0 +1,45 @@
+# --------------------------------------------------
+# 1. ALLOW AI SEARCH ENGINES (Visibility & Citations)
+# These bots help you appear in ChatGPT Search, Perplexity, and Claude Search.
+# --------------------------------------------------
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# --------------------------------------------------
+# 2. BLOCK AI DATA TRAINING (Data Protection)
+# These bots scrape your site to train their AI models without giving you traffic.
+# --------------------------------------------------
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+# --------------------------------------------------
+# 3. STANDARD SEO & SECURITY (Google/Bing/WordPress)
+# --------------------------------------------------
+User-agent: *
+Allow: /
+
+# --------------------------------------------------
+# 4. SITEMAP LOCATION
+# --------------------------------------------------
+Sitemap: https://gorehospital.com/sitemap/sitemap.xml
