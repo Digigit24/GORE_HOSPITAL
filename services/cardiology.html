@@ -1566,11 +1566,7 @@
                     </div>
                   </div>
                 </div>
-                </div>div>
                 <div class="swiper-pagination"></div>
-                <!-- Navigation Buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
               </div>
             </div>
           </div>
@@ -1886,34 +1882,14 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       if (window.Swiper) {
-        const testimonialSwiper = new Swiper(".swiper-container-h1", {
+        new Swiper(".swiper-container-h1", {
           loop: true,
           autoHeight: true,
           spaceBetween: 24,
           slidesPerView: 1,
           pagination: { el: ".swiper-pagination", clickable: true },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true, // Native Swiper support for pause on hover
-          },
           breakpoints: { 992: { slidesPerView: 2 } },
         });
-
-        // Fallback for pause on hover if native support isn't available in this version
-        const swiperContainer = document.querySelector('.swiper-container-h1');
-        if (swiperContainer) {
-          swiperContainer.addEventListener('mouseenter', () => {
-            testimonialSwiper.autoplay.stop();
-          });
-          swiperContainer.addEventListener('mouseleave', () => {
-            testimonialSwiper.autoplay.start();
-          });
-        }
       }
     });
 
