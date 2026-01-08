@@ -2,14 +2,18 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap>
 <loc>https://gorehospital.com/sitemap/sitemap-services.xml</loc>
-<lastmod>2025-12-27</lastmod>
+<lastmod>2026-01-08</lastmod>
 </sitemap>
 <sitemap>
 <loc>https://gorehospital.com/sitemap/sitemap-clinic-info.xml</loc>
-<lastmod>2025-12-27</lastmod>
+<lastmod>2026-01-08</lastmod>
 </sitemap>
 <sitemap>
 <loc>https://gorehospital.com/sitemap/sitemap-blogs.xml</loc>
-<lastmod>2025-12-27</lastmod>
+<lastmod>2026-01-08</lastmod>
+</sitemap>
+<sitemap>
+<loc>https://gorehospital.com/sitemap/image-sitemap.xml</loc>
+<lastmod>2026-01-08</lastmod>
 </sitemap>
 </sitemapindex>
