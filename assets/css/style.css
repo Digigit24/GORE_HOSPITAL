@@ -362,7 +362,7 @@ p {
     font-size: var(--font-size-b2);
     line-height: var(--line-height-b2);
     font-weight: var(--p-regular);
-    color: var(--color-body);
+    color: #000;
     margin: 0 0 40px;
 }
 
@@ -518,7 +518,7 @@ ul li {
     line-height: var(--line-height-b1);
     margin-top: 10px;
     margin-bottom: 10px;
-    color: var(--color-body);
+    color: #000;
 }
 
 ul li a {

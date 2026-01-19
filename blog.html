@@ -373,31 +373,40 @@
 
     /* Blog card  -  clean image + title + button */
 
-    .single-blog-card {
+   .single-blog-card {
+  background: #fffffe;
+  border-radius: 25px;
+  padding: 20px; /* Add some padding inside the card for content spacing */
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 1);
+  border: 1px solid rgba(245, 247, 249, 0.9);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Allow the card to grow to fit content */
+  width: 100%; /* Adjust width to a reasonable size */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative; /* Make sure we can absolutely position the "Read More" button */
+}
 
-      background: #fffffe;
-
-      border-radius: 25px;
-
-      padding: 0;
-
-      box-shadow: 0 6px 20px rgba(15, 23, 42, 1);
-
-      border: 1px solid rgba(245, 247, 249, 0.9);
-
-      overflow: hidden;
-
-      display: flex;
-
-      flex-direction: column;
-
-      height: 100%;
-
-      width: 150%;
-
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-
-    }
+.single-blog-card .read-more {
+  margin-top: 10px;
+  align-self: center; /* Center the button horizontally */
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  background: #d6a70d;
+  border: 1px solid #0b5ed7;
+  position: absolute;
+  bottom: 10px; /* Position the button at the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center it horizontally */
+}
 
 
 
@@ -480,39 +489,6 @@
     }
 
 
-
-    /* Read more button styled to match theme */
-
-    .single-blog-card .read-more {
-
-      margin-top: 10px;
-
-      align-self: center;
-
-      font-size: 1.5rem;
-
-      font-weight: 500;
-
-      color: #ffffff;
-
-      text-decoration: none;
-
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 6px;
-
-      padding: 5px 10px;
-
-      border-radius: 7px;
-
-      background: #d6a70d;
-      /* same as site primary blue */
-
-      border: 1px solid #0b5ed7;
-
-    }
 
 
 
@@ -1541,6 +1517,40 @@
 
           <div class="row g-4" id="blog-list">
 
+            <!-- most common ent problems 14 Jan 2026 -->
+             <div class="col-lg-6 col-md-6">
+              <article class="single-blog-card">
+                <div class="thumb">
+                  <img src="assets/most-common-ent-problems.png" alt="Most Common ENT Problems">
+                </div>
+                <div class="blog-content">
+                  <h3 class="title">
+                    <a href="blogs/most-common-ent-problems.html">12 Most Common ENT Problems: </a>
+                  </h3>
+                  <p class="disc">Ear, Nose, and Throat (ENT) problems may seem minor at first, but they can significantly impact your daily comfort, sleep quality, communication, and overall health if left untreated. </p>
+                  <a href="/blogs/most-common-ent-problems.html" class="read-more">Read More</a>
+                </div>
+              </article>
+            </div>
+
+
+
+            <!-- early warning signs of diabetes 14 Jan 2026-->
+              <div class="col-lg-6 col-md-6">
+              <article class="single-blog-card">
+                <div class="thumb">
+                  <img src="assets/early-warning-signs-of-diabetes.png" alt="Early Warning Signs of Diabetes">
+                </div>
+                <div class="blog-content">
+                  <h3 class="title">
+                    <a href="blogs/early-warning-signs-of-diabetes.html">What are the 10 early warning signs of diabetes?</a>
+                  </h3>
+                  <p class="disc">Diabetes doesn’t usually announce itself loudly. In many cases, it develops quietly, showing small changes in the body that are easy to dismiss as stress, aging.</p>
+                  <a href="/blogs/early-warning-signs-of-diabetes.html" class="read-more">Read More</a>
+                </div>
+              </article>
+            </div>
+
 
             <!-- top warning signs of heart and lungs disease blog post 13th Jan 2026 -->
             <div class="col-lg-6 col-md-6">
@@ -1586,7 +1596,7 @@
                 <div class="blog-content">
                   <h3 class="title">
                     <a href="/blogs/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.html">Minimally
-                      Invasive Orthopaedic Surgery: Faster Recovery, Less Pain</a>
+                      Invasive Orthopaedic Surgery:</a>
                   </h3>
                   <p class="disc">Discover the benefits of minimally invasive techniques in orthopaedic surgery for
                     quicker healing and reduced post-operative discomfort.</p>

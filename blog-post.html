@@ -984,39 +984,6 @@
           }
         }
 
-        // ---------- œ… SEO OVERRIDES ----------
-        const override = postSeoMap[slugForSeo];
-        const cleanTitle = stripHTML(title);
-
-        let metaTitle;
-        let metaDescription;
-
-        if (override) {
-          // Use your custom text from postSeoMap
-          metaTitle = override.metaTitle;
-          metaDescription = override.metaDescription;
-        } else {
-          // Fallback if slug not in map
-          metaTitle = `${cleanTitle} | Gore Multispeciality Hospital, Ravet`;
-          metaDescription =
-            plainContent || "Health article from Gore Multispeciality Hospital, Ravet.";
-          if (metaDescription.length > 160) {
-            metaDescription = metaDescription.slice(0, 157) + "...";
-          }
-        }
-
-        // <title>
-        document.title = metaTitle;
-
-        // <meta name="description">
-        setMetaTag("description", metaDescription);
-
-        // OG / social tags
-        const currentUrl = window.location.href;
-        setOgTag("og:title", metaTitle);
-        setOgTag("og:description", metaDescription);
-        setOgTag("og:url", currentUrl);
-        if (imageUrl) setOgTag("og:image", imageUrl);
 
         // ---------- œ… RENDER ARTICLE ----------
         container.innerHTML = `
